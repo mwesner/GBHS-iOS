@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,130 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GBHS_Logo" translatesAutoresizingMaskIntoConstraints="NO" id="PgX-pk-K0N">
+                                <rect key="frame" x="0.0" y="20" width="600" height="140"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MG6-oB-4Lr">
+                                <rect key="frame" x="16" y="276" width="568" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Announcements">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showAnnouncements:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qgY-kN-KJC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCb-Bf-oWc">
+                                <rect key="frame" x="16" y="312" width="126" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="GBHS Facebook">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPosts:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jRF-da-6WI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uqh-SG-paj">
+                                <rect key="frame" x="16" y="348" width="126" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="GBHS Twitter">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showTweets:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Tob-uK-uQG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJ8-OD-ASv">
+                                <rect key="frame" x="16" y="384" width="126" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Event Calendar">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showCal:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pIq-0q-mx4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xqg-Jp-fNO">
+                                <rect key="frame" x="430" y="312" width="154" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Daily Schedule">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showTimes:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccd-iO-MF6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZkR-iQ-WJG">
+                                <rect key="frame" x="430" y="384" width="154" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Open GBHS Website">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ifY-QC-sWB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4yl-KI-3QP">
+                                <rect key="frame" x="430" y="348" width="154" height="28"/>
+                                <inset key="contentEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
+                                <state key="normal" title="Check Grades">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkGrades:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O34-oM-KEc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40784313725490196" green="0.062745098039215685" blue="0.031372549019607843" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yCb-Bf-oWc" firstAttribute="top" secondItem="MG6-oB-4Lr" secondAttribute="bottom" constant="8" symbolic="YES" id="03y-oF-mfN"/>
+                            <constraint firstItem="yCb-Bf-oWc" firstAttribute="leading" secondItem="MG6-oB-4Lr" secondAttribute="leading" id="3Ut-Ms-zsZ"/>
+                            <constraint firstItem="yCb-Bf-oWc" firstAttribute="trailing" secondItem="Uqh-SG-paj" secondAttribute="trailing" id="4pQ-vm-daQ"/>
+                            <constraint firstItem="Uqh-SG-paj" firstAttribute="leading" secondItem="aJ8-OD-ASv" secondAttribute="leading" id="52Q-10-Wji"/>
+                            <constraint firstItem="4yl-KI-3QP" firstAttribute="trailing" secondItem="xqg-Jp-fNO" secondAttribute="trailing" id="69W-UO-Qf3"/>
+                            <constraint firstItem="aJ8-OD-ASv" firstAttribute="baseline" secondItem="ZkR-iQ-WJG" secondAttribute="baseline" id="DR9-34-RYq"/>
+                            <constraint firstItem="Uqh-SG-paj" firstAttribute="top" secondItem="yCb-Bf-oWc" secondAttribute="bottom" constant="8" symbolic="YES" id="ETG-nF-gNG"/>
+                            <constraint firstItem="4yl-KI-3QP" firstAttribute="trailing" secondItem="ZkR-iQ-WJG" secondAttribute="trailing" id="HAc-dK-zg7"/>
+                            <constraint firstItem="PgX-pk-K0N" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JAj-OC-CLN"/>
+                            <constraint firstItem="ZkR-iQ-WJG" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="LCW-Qw-oU5"/>
+                            <constraint firstItem="PgX-pk-K0N" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="OSR-VG-8YL"/>
+                            <constraint firstAttribute="trailing" secondItem="PgX-pk-K0N" secondAttribute="trailing" id="QcP-NV-usI"/>
+                            <constraint firstItem="aJ8-OD-ASv" firstAttribute="top" secondItem="Uqh-SG-paj" secondAttribute="bottom" constant="8" symbolic="YES" id="UtO-NO-0jm"/>
+                            <constraint firstItem="MG6-oB-4Lr" firstAttribute="centerX" secondItem="PgX-pk-K0N" secondAttribute="centerX" id="a60-rV-TTK"/>
+                            <constraint firstItem="Uqh-SG-paj" firstAttribute="leading" secondItem="yCb-Bf-oWc" secondAttribute="leading" id="ehX-Qw-jF0"/>
+                            <constraint firstItem="xqg-Jp-fNO" firstAttribute="leading" secondItem="4yl-KI-3QP" secondAttribute="leading" id="o1R-6A-0z6"/>
+                            <constraint firstItem="yCb-Bf-oWc" firstAttribute="baseline" secondItem="xqg-Jp-fNO" secondAttribute="baseline" id="p3I-6n-5R3"/>
+                            <constraint firstItem="Uqh-SG-paj" firstAttribute="baseline" secondItem="4yl-KI-3QP" secondAttribute="baseline" id="pf3-xQ-iG5"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ZkR-iQ-WJG" secondAttribute="bottom" constant="188" id="uJ6-bA-YPw"/>
+                            <constraint firstItem="aJ8-OD-ASv" firstAttribute="trailing" secondItem="Uqh-SG-paj" secondAttribute="trailing" id="wEQ-j0-hHh"/>
+                            <constraint firstItem="4yl-KI-3QP" firstAttribute="leading" secondItem="ZkR-iQ-WJG" secondAttribute="leading" id="xg5-tN-vaB"/>
+                            <constraint firstItem="MG6-oB-4Lr" firstAttribute="trailing" secondItem="xqg-Jp-fNO" secondAttribute="trailing" id="z1S-ce-kUS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnAnnounce" destination="MG6-oB-4Lr" id="gQJ-X8-WTy"/>
+                        <outlet property="btnCalendar" destination="aJ8-OD-ASv" id="X9S-nQ-Hq4"/>
+                        <outlet property="btnFacebook" destination="yCb-Bf-oWc" id="CDE-Um-06l"/>
+                        <outlet property="btnGrades" destination="4yl-KI-3QP" id="kfF-lb-jCr"/>
+                        <outlet property="btnTimes" destination="xqg-Jp-fNO" id="N6k-wg-3aL"/>
+                        <outlet property="btnTwitter" destination="Uqh-SG-paj" id="gMB-gG-Y2N"/>
+                        <outlet property="btnWeb" destination="ZkR-iQ-WJG" id="4jj-gv-zsM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="242" y="369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GBHS_Logo" width="420" height="140"/>
+    </resources>
 </document>
