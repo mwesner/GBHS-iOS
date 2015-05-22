@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGj-nX-eZq">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
@@ -86,7 +85,6 @@
         <!--Twitter-->
         <scene sceneID="n0A-gn-csV">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZv-rH-AlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="fUH-1N-igz" customClass="NavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Twitter" image="Twitter" id="gM9-Lm-Dv1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k8d-cW-C8X">
@@ -97,6 +95,7 @@
                         <segue destination="jWE-px-phz" kind="relationship" relationship="rootViewController" id="Mrh-bZ-tf3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZv-rH-AlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="874" y="356"/>
         </scene>
@@ -124,7 +123,6 @@
         <!--Tweets View Controller-->
         <scene sceneID="r9w-hL-MTs">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="llj-z3-PdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Tweets View Controller" id="jWE-px-phz" customClass="TweetsViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BXW-YO-UbY"/>
@@ -137,8 +135,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="@GrandBlancPride" id="yuL-nw-4zX"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llj-z3-PdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868" y="1026"/>
+            <point key="canvasLocation" x="874" y="1022"/>
         </scene>
         <!--Faculty View Controller-->
         <scene sceneID="oWa-Wr-wpR">
@@ -207,7 +206,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="MoreCell" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MoreCell" textLabel="YPj-il-qbM" imageView="rNx-Uz-BMn" style="IBUITableViewCellStyleDefault" id="mxY-vO-wOd">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="MoreCell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="MoreCell" textLabel="YPj-il-qbM" imageView="rNx-Uz-BMn" style="IBUITableViewCellStyleDefault" id="mxY-vO-wOd">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mxY-vO-wOd" id="66y-Ij-ifj">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -243,7 +242,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM7-Oi-0RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2116" y="1026"/>
+            <point key="canvasLocation" x="2120" y="1022"/>
         </scene>
     </scenes>
     <resources>

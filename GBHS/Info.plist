@@ -47,17 +47,6 @@
 				<key>KitName</key>
 				<string>Crashlytics</string>
 			</dict>
-			<dict>
-				<key>KitInfo</key>
-				<dict>
-					<key>consumerKey</key>
-					<string>wH2s5oPGqrcHiW5eygKY0c86F</string>
-					<key>consumerSecret</key>
-					<string>NH1QP0xHY65c6uxmPIwgb43SgRA4RrHCKABVFyBwC5FBiTOo9m</string>
-				</dict>
-				<key>KitName</key>
-				<string>Digits</string>
-			</dict>
 		</array>
 	</dict>
 	<key>LSRequiresIPhoneOS</key>
@@ -71,7 +60,7 @@
 		<string>armv7</string>
 	</array>
 	<key>UIStatusBarStyle</key>
-	<string>UIStatusBarStyleBlackTranslucent</string>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

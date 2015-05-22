@@ -21,10 +21,21 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
     "Early College",
     "External Links"]
     
+    let imagelist = [
+    "Clock",
+    "Facebook",
+    "Grades",
+    "Map",
+    "Calendar",
+    "Athletics",
+    "College",
+    "External"]
+
+
     override func viewWillAppear(animated: Bool) {
         self.title="More"
     }
-    
+
     //Number of sections in table
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
@@ -38,6 +49,7 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
     //Contents of each cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var moreitem = morelist[indexPath.row]
+        var imageitem = imagelist[indexPath.row]
         
         let CellIdentifier: String = "MoreCell"
         
@@ -47,27 +59,19 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
         }
         cell!.textLabel!.text = moreitem
-        switch indexPath.row {
-        case 0:
-            cell!.imageView!.image = UIImage(named: "Clock")
-        case 1:
-            cell!.imageView!.image = UIImage(named: "Facebook")
-        case 2:
-            cell!.imageView!.image = UIImage(named: "Grades")
-        case 3:
-            cell!.imageView!.image = UIImage(named: "Map")
-        case 4:
-            cell!.imageView!.image = UIImage(named: "Calendar")
-        case 5:
-            cell!.imageView!.image = UIImage(named: "Athletics")
-        case 6:
-            cell!.imageView!.image = UIImage(named: "College")
-        case 7:
-            cell!.imageView!.image = UIImage(named: "External")
-        default:
-            cell!.imageView!.image = nil
-        }
+        cell!.imageView!.image = UIImage(named: imageitem)
         return cell!
+    }
+    
+    //Handle cell clicks
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        switch indexPath.row {
+        default:
+            var alert = UIAlertController(title: "Table entry selected", message: "\(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        //UIApplication.sharedApplication().openURL(NSURL(string: "http://grandblanc.high.schoolfusion.us")!)
     }
 }
 
