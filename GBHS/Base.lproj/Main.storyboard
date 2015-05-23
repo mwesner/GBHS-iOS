@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="r8d-FQ-fHg">
             <objects>
-                <navigationController id="Rrz-Du-YVj" customClass="NavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="Rrz-Du-YVj" customClass="MainNavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="contacts" id="cq0-lD-a3X"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eNO-5O-FDN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="1494" y="356"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Main Navigation Controller-->
         <scene sceneID="f7k-Ds-EEP">
             <objects>
-                <navigationController id="Dj6-lk-bVZ" customClass="NavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="Dj6-lk-bVZ" customClass="MainNavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="more" id="X1E-Ao-1aY"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yj3-kd-5y5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -41,7 +41,7 @@
         <!--Announcements-->
         <scene sceneID="rD5-o1-GIt">
             <objects>
-                <navigationController id="txp-Av-Ryl" customClass="NavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="txp-Av-Ryl" customClass="MainNavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Announcements" image="Announce" id="kyg-Ov-ml4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vuh-u9-oBZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -85,7 +85,8 @@
         <!--Twitter-->
         <scene sceneID="n0A-gn-csV">
             <objects>
-                <navigationController id="fUH-1N-igz" customClass="NavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZv-rH-AlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="fUH-1N-igz" customClass="TwitterNavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Twitter" image="Twitter" id="gM9-Lm-Dv1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="k8d-cW-C8X">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -95,7 +96,6 @@
                         <segue destination="jWE-px-phz" kind="relationship" relationship="rootViewController" id="Mrh-bZ-tf3"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZZv-rH-AlF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="874" y="356"/>
         </scene>
@@ -123,6 +123,7 @@
         <!--Tweets View Controller-->
         <scene sceneID="r9w-hL-MTs">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="llj-z3-PdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController title="Tweets View Controller" id="jWE-px-phz" customClass="TweetsViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BXW-YO-UbY"/>
@@ -135,7 +136,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="@GrandBlancPride" id="yuL-nw-4zX"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="llj-z3-PdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="874" y="1022"/>
         </scene>
@@ -238,11 +238,65 @@
                     </navigationItem>
                     <connections>
                         <outlet property="btnAbout" destination="8dt-iA-Oku" id="bKR-Io-YOY"/>
+                        <segue destination="L9A-OG-CKe" kind="show" identifier="MapSegue" id="60X-Nz-CZz"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM7-Oi-0RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2120" y="1022"/>
+            <point key="canvasLocation" x="2120" y="1028"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="m4a-5v-lMF">
+            <objects>
+                <navigationController id="L9A-OG-CKe" customClass="NavigationController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y0y-gY-0HD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FGi-AX-yTV" kind="relationship" relationship="rootViewController" id="cT4-EH-FwA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fcu-Jg-aC5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2746" y="1022"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="B7K-Tq-t6V">
+            <objects>
+                <viewController id="FGi-AX-yTV" customClass="MapViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DmO-Qc-Sb1"/>
+                        <viewControllerLayoutGuide type="bottom" id="or7-Wl-srK"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LWq-vI-JYY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Pyy-rv-Qqg">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="p7D-A7-zh2">
+                            <rect key="frame" x="16" y="7.5" width="568" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="Standard"/>
+                                <segment title="Satellite"/>
+                                <segment title="Hybrid"/>
+                                <segment title="Terrain"/>
+                            </segments>
+                            <connections>
+                                <action selector="changeMapType:" destination="FGi-AX-yTV" eventType="valueChanged" id="0jH-Q0-6ZF"/>
+                            </connections>
+                        </segmentedControl>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="mapChange" destination="p7D-A7-zh2" id="I1M-nC-PHl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3My-jv-cgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2746" y="1682"/>
         </scene>
     </scenes>
     <resources>

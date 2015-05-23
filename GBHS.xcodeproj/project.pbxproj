@@ -10,6 +10,22 @@
 		3F3756F71ADF39970017223E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3756F61ADF39970017223E /* AppDelegate.swift */; };
 		3F37570D1ADF39970017223E /* GBHSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37570C1ADF39970017223E /* GBHSTests.swift */; };
 		3F3757171ADF39C00017223E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3757161ADF39C00017223E /* Images.xcassets */; };
+		3F7477CD1B10C77B0064A85E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7477CC1B10C77B0064A85E /* MapViewController.swift */; };
+		3F7477DD1B10CB440064A85E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D11B10CB440064A85E /* AVFoundation.framework */; };
+		3F7477DE1B10CB440064A85E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D21B10CB440064A85E /* CoreData.framework */; };
+		3F7477DF1B10CB440064A85E /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D31B10CB440064A85E /* CoreLocation.framework */; };
+		3F7477E01B10CB440064A85E /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D41B10CB440064A85E /* CoreText.framework */; };
+		3F7477E11B10CB440064A85E /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D51B10CB440064A85E /* GLKit.framework */; };
+		3F7477E21B10CB440064A85E /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D61B10CB440064A85E /* ImageIO.framework */; };
+		3F7477E31B10CB440064A85E /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D71B10CB440064A85E /* libc++.dylib */; };
+		3F7477E41B10CB440064A85E /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D81B10CB440064A85E /* libicucore.dylib */; };
+		3F7477E51B10CB440064A85E /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D91B10CB440064A85E /* libz.dylib */; };
+		3F7477E61B10CB440064A85E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477DA1B10CB440064A85E /* OpenGLES.framework */; };
+		3F7477E71B10CB440064A85E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477DB1B10CB440064A85E /* QuartzCore.framework */; };
+		3F7477E81B10CB440064A85E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477DC1B10CB440064A85E /* SystemConfiguration.framework */; };
+		3F7477F11B10CF080064A85E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477F01B10CF080064A85E /* GoogleMaps.framework */; };
+		3F7477F41B10CF1B0064A85E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F7477F31B10CF1B0064A85E /* GoogleMaps.bundle */; };
+		3F7477FC1B10F5A70064A85E /* TwitterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7477FB1B10F5A70064A85E /* TwitterNavigationController.swift */; };
 		3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3756FA1ADF39970017223E /* Main.storyboard */; };
 		3F7982751B0FD739007FD42A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3756FF1ADF39970017223E /* LaunchScreen.xib */; };
 		3F841AC41B0F8C1000A2A4EA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F841AC01B0F8C1000A2A4EA /* Fabric.framework */; };
@@ -20,7 +36,7 @@
 		3FD0D0931B0EDAC7007BDEBB /* AnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0921B0EDAC7007BDEBB /* AnnounceViewController.swift */; };
 		3FD0D0951B0EDAD2007BDEBB /* FacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */; };
 		3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */; };
-		3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */; };
+		3FD0D0991B0EDAE5007BDEBB /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0981B0EDAE5007BDEBB /* MainNavigationController.swift */; };
 		3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,17 +58,34 @@
 		3F37570B1ADF39970017223E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F37570C1ADF39970017223E /* GBHSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHSTests.swift; sourceTree = "<group>"; };
 		3F3757161ADF39C00017223E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		3F7982721B0FD525007FD42A /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
-		3F7982731B0FD53D007FD42A /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
-		3F841AC01B0F8C1000A2A4EA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
-		3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterKit.framework; sourceTree = "<group>"; };
-		3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TwitterCore.framework; sourceTree = "<group>"; };
-		3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		3F7477CB1B10C5F80064A85E /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
+		3F7477CC1B10C77B0064A85E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		3F7477D11B10CB440064A85E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3F7477D21B10CB440064A85E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3F7477D31B10CB440064A85E /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3F7477D41B10CB440064A85E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		3F7477D51B10CB440064A85E /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		3F7477D61B10CB440064A85E /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		3F7477D71B10CB440064A85E /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		3F7477D81B10CB440064A85E /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		3F7477D91B10CB440064A85E /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		3F7477DA1B10CB440064A85E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		3F7477DB1B10CB440064A85E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3F7477DC1B10CB440064A85E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		3F7477F01B10CF080064A85E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		3F7477F31B10CF1B0064A85E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = ../../Downloads/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		3F7477F61B10D19D0064A85E /* GBHS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBHS-Bridging-Header.h"; sourceTree = "<group>"; };
+		3F7477F71B10D19D0064A85E /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
+		3F7477FB1B10F5A70064A85E /* TwitterNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterNavigationController.swift; sourceTree = "<group>"; };
+		3F841AC01B0F8C1000A2A4EA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
+		3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../TwitterKit.framework; sourceTree = "<group>"; };
+		3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
+		3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
+		3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
 		3FD0D0921B0EDAC7007BDEBB /* AnnounceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceViewController.swift; sourceTree = "<group>"; };
 		3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyViewController.swift; sourceTree = "<group>"; };
 		3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
-		3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		3FD0D0981B0EDAE5007BDEBB /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,8 +94,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F7477DD1B10CB440064A85E /* AVFoundation.framework in Frameworks */,
+				3F7477DE1B10CB440064A85E /* CoreData.framework in Frameworks */,
+				3F7477DF1B10CB440064A85E /* CoreLocation.framework in Frameworks */,
+				3F7477E01B10CB440064A85E /* CoreText.framework in Frameworks */,
+				3F7477E11B10CB440064A85E /* GLKit.framework in Frameworks */,
+				3F7477E21B10CB440064A85E /* ImageIO.framework in Frameworks */,
+				3F7477E31B10CB440064A85E /* libc++.dylib in Frameworks */,
+				3F7477E41B10CB440064A85E /* libicucore.dylib in Frameworks */,
+				3F7477E51B10CB440064A85E /* libz.dylib in Frameworks */,
+				3F7477E61B10CB440064A85E /* OpenGLES.framework in Frameworks */,
+				3F7477E71B10CB440064A85E /* QuartzCore.framework in Frameworks */,
+				3F7477E81B10CB440064A85E /* SystemConfiguration.framework in Frameworks */,
 				3F841AC41B0F8C1000A2A4EA /* Fabric.framework in Frameworks */,
 				3F841AC81B0F8C1000A2A4EA /* TwitterCore.framework in Frameworks */,
+				3F7477F11B10CF080064A85E /* GoogleMaps.framework in Frameworks */,
 				3F841ACA1B0F8C5800A2A4EA /* Crashlytics.framework in Frameworks */,
 				3F841AC61B0F8C1000A2A4EA /* TwitterKit.framework in Frameworks */,
 			);
@@ -81,22 +127,21 @@
 		3F3756E81ADF39970017223E = {
 			isa = PBXGroup;
 			children = (
-				3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */,
-				3F841AC01B0F8C1000A2A4EA /* Fabric.framework */,
-				3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */,
-				3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */,
-				3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */,
 				3F3756F31ADF39970017223E /* GBHS */,
 				3F3757091ADF39970017223E /* GBHSTests */,
+				3F7477ED1B10CDD50064A85E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		3F3756F31ADF39970017223E /* GBHS */ = {
 			isa = PBXGroup;
 			children = (
+				3F7477F61B10D19D0064A85E /* GBHS-Bridging-Header.h */,
 				3F3756F61ADF39970017223E /* AppDelegate.swift */,
-				3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */,
+				3FD0D0981B0EDAE5007BDEBB /* MainNavigationController.swift */,
+				3F7477FB1B10F5A70064A85E /* TwitterNavigationController.swift */,
 				3FD0D0921B0EDAC7007BDEBB /* AnnounceViewController.swift */,
+				3F7477CC1B10C77B0064A85E /* MapViewController.swift */,
 				3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */,
 				3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */,
 				3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */,
@@ -123,7 +168,7 @@
 				3F37570A1ADF39970017223E /* Supporting Files */,
 			);
 			path = GBHSTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3F37570A1ADF39970017223E /* Supporting Files */ = {
 			isa = PBXGroup;
@@ -131,6 +176,33 @@
 				3F37570B1ADF39970017223E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3F7477ED1B10CDD50064A85E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F7477F31B10CF1B0064A85E /* GoogleMaps.bundle */,
+				3F7477F01B10CF080064A85E /* GoogleMaps.framework */,
+				3F7477D11B10CB440064A85E /* AVFoundation.framework */,
+				3F7477D21B10CB440064A85E /* CoreData.framework */,
+				3F7477D31B10CB440064A85E /* CoreLocation.framework */,
+				3F7477D41B10CB440064A85E /* CoreText.framework */,
+				3F7477D51B10CB440064A85E /* GLKit.framework */,
+				3F7477D61B10CB440064A85E /* ImageIO.framework */,
+				3F7477D71B10CB440064A85E /* libc++.dylib */,
+				3F7477D81B10CB440064A85E /* libicucore.dylib */,
+				3F7477D91B10CB440064A85E /* libz.dylib */,
+				3F7477DA1B10CB440064A85E /* OpenGLES.framework */,
+				3F7477DB1B10CB440064A85E /* QuartzCore.framework */,
+				3F7477DC1B10CB440064A85E /* SystemConfiguration.framework */,
+				3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */,
+				3F841AC01B0F8C1000A2A4EA /* Fabric.framework */,
+				3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */,
+				3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */,
+				3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */,
+			);
+			name = Frameworks;
+			path = GBHSTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,7 +223,7 @@
 			);
 			name = GBHS;
 			productName = GBHS;
-			productReference = 3F7982731B0FD53D007FD42A /* GBHS.app */;
+			productReference = 3F7477F71B10D19D0064A85E /* GBHS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F3757051ADF39970017223E /* GBHSTests */ = {
@@ -169,7 +241,7 @@
 			);
 			name = GBHSTests;
 			productName = GBHSTests;
-			productReference = 3F7982721B0FD525007FD42A /* GBHSTests.xctest */;
+			productReference = 3F7477CB1B10C5F80064A85E /* GBHSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -219,6 +291,7 @@
 				3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */,
 				3F841AC71B0F8C1000A2A4EA /* TwitterKitResources.bundle in Resources */,
 				3F3757171ADF39C00017223E /* Images.xcassets in Resources */,
+				3F7477F41B10CF1B0064A85E /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,11 +327,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */,
-				3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */,
+				3F7477FC1B10F5A70064A85E /* TwitterNavigationController.swift in Sources */,
+				3FD0D0991B0EDAE5007BDEBB /* MainNavigationController.swift in Sources */,
 				3FD0D0951B0EDAD2007BDEBB /* FacultyViewController.swift in Sources */,
 				3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */,
 				3FD0D0931B0EDAC7007BDEBB /* AnnounceViewController.swift in Sources */,
 				3F3756F71ADF39970017223E /* AppDelegate.swift in Sources */,
+				3F7477CD1B10C77B0064A85E /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,16 +463,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/student/Downloads/GoogleMaps-iOS-1.9.2",
+					"$(PROJECT_DIR)/GBHSTests",
 				);
 				INFOPLIST_FILE = GBHS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GBHS/GBHS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -406,16 +487,21 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
+					"/Users/student/Downloads/GoogleMaps-iOS-1.9.2",
+					"$(PROJECT_DIR)/GBHSTests",
 				);
 				INFOPLIST_FILE = GBHS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "GBHS/GBHS-Bridging-Header.h";
 			};
 			name = Release;
 		};

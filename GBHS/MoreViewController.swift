@@ -66,12 +66,18 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
     //Handle cell clicks
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
+        case 2:
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://studentvue.geneseeisd.org/GBCS/Login_Student_PXP.aspx")!)
+        case 3:
+            performSegueWithIdentifier("MapSegue", sender: nil)
+        case 8:
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://grandblanc.high.schoolfusion.us")!)
         default:
             var alert = UIAlertController(title: "Table entry selected", message: "\(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
             self.presentViewController(alert, animated: true, completion: nil)
         }
-        //UIApplication.sharedApplication().openURL(NSURL(string: "http://grandblanc.high.schoolfusion.us")!)
+        
     }
 }
 
