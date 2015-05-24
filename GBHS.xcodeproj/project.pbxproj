@@ -23,9 +23,9 @@
 		3F7477E61B10CB440064A85E /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477DA1B10CB440064A85E /* OpenGLES.framework */; };
 		3F7477E71B10CB440064A85E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477DB1B10CB440064A85E /* QuartzCore.framework */; };
 		3F7477E81B10CB440064A85E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477DC1B10CB440064A85E /* SystemConfiguration.framework */; };
-		3F7477F41B10CF1B0064A85E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F7477F31B10CF1B0064A85E /* GoogleMaps.bundle */; };
 		3F7477FC1B10F5A70064A85E /* TwitterNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7477FB1B10F5A70064A85E /* TwitterNavigationController.swift */; };
 		3F7478061B110CA30064A85E /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7478051B110CA30064A85E /* GoogleMaps.framework */; };
+		3F7478161B1188230064A85E /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F7478151B1188230064A85E /* GoogleMaps.bundle */; };
 		3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3756FA1ADF39970017223E /* Main.storyboard */; };
 		3F7982751B0FD739007FD42A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3756FF1ADF39970017223E /* LaunchScreen.xib */; };
 		3F841AC41B0F8C1000A2A4EA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F841AC01B0F8C1000A2A4EA /* Fabric.framework */; };
@@ -71,12 +71,12 @@
 		3F7477DA1B10CB440064A85E /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		3F7477DB1B10CB440064A85E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3F7477DC1B10CB440064A85E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		3F7477F31B10CF1B0064A85E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = ../../Downloads/GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		3F7477F61B10D19D0064A85E /* GBHS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GBHS-Bridging-Header.h"; sourceTree = "<group>"; };
 		3F7477FB1B10F5A70064A85E /* TwitterNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwitterNavigationController.swift; sourceTree = "<group>"; };
-		3F7477FF1B110A5E0064A85E /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
-		3F7478001B110A5E0064A85E /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
 		3F7478051B110CA30064A85E /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = SOURCE_ROOT; };
+		3F7478131B11122A0064A85E /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
+		3F7478141B11122A0064A85E /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
+		3F7478151B1188230064A85E /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = SOURCE_ROOT; };
 		3F841AC01B0F8C1000A2A4EA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
 		3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../TwitterKit.framework; sourceTree = "<group>"; };
 		3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
@@ -181,8 +181,8 @@
 		3F7477ED1B10CDD50064A85E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F7478151B1188230064A85E /* GoogleMaps.bundle */,
 				3F7478051B110CA30064A85E /* GoogleMaps.framework */,
-				3F7477F31B10CF1B0064A85E /* GoogleMaps.bundle */,
 				3F7477D11B10CB440064A85E /* AVFoundation.framework */,
 				3F7477D21B10CB440064A85E /* CoreData.framework */,
 				3F7477D31B10CB440064A85E /* CoreLocation.framework */,
@@ -223,7 +223,7 @@
 			);
 			name = GBHS;
 			productName = GBHS;
-			productReference = 3F7477FF1B110A5E0064A85E /* GBHS.app */;
+			productReference = 3F7478131B11122A0064A85E /* GBHS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F3757051ADF39970017223E /* GBHSTests */ = {
@@ -241,7 +241,7 @@
 			);
 			name = GBHSTests;
 			productName = GBHSTests;
-			productReference = 3F7478001B110A5E0064A85E /* GBHSTests.xctest */;
+			productReference = 3F7478141B11122A0064A85E /* GBHSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -291,7 +291,7 @@
 				3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */,
 				3F841AC71B0F8C1000A2A4EA /* TwitterKitResources.bundle in Resources */,
 				3F3757171ADF39C00017223E /* Images.xcassets in Resources */,
-				3F7477F41B10CF1B0064A85E /* GoogleMaps.bundle in Resources */,
+				3F7478161B1188230064A85E /* GoogleMaps.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
