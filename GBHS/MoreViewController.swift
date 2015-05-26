@@ -1,28 +1,46 @@
 import UIKit
 
-class MoreViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class MoreViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate {
+    
+    var alertControllerAvailable = false
     
     @IBOutlet weak var btnAbout: UIBarButtonItem!
     
+    @IBOutlet weak var webView: UIWebView!
+    
+    @IBOutlet var table: UITableView!
     
     @IBAction func showAbout(sender: UIBarButtonItem) {
-        var alert = UIAlertController(title: "Grand Blanc High School", message: "Developed by Grand Blanc CTE.\n\nTEAM\n\nLeader:\n\nMichael Wesner\nAP Computer Science A instructor\n\n2015 members:\n\nCorey Rowe\nAaron Goodfellow", preferredStyle: UIAlertControllerStyle.Alert)
-        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.Cancel, handler: nil))
-        self.presentViewController(alert, animated: true, completion: nil)
+        
+        let title = "Grand Blanc High School"
+        let message = "Developed by Grand Blanc CTE.\n\nTeam Leader:\n\nMichael Wesner\nAP Computer Science A instructor\n\n2015 members:\n\nCorey Rowe\nAaron Goodfellow\n\nIcons provided by Icons8\nhttp://icons8.com"
+        let buttontitle = "Close"
+        
+        if alertControllerAvailable {
+            //UIAlertController for iOS 8 +
+            var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: buttontitle, style: UIAlertActionStyle.Cancel, handler: nil))
+            self.presentViewController(alert, animated: true, completion: nil)
+        } else {
+            //UIAlertView for iOS 7
+            let alert = UIAlertView()
+            alert.title = title
+            alert.message = message
+            alert.addButtonWithTitle(buttontitle)
+            alert.show()
+        }
     }
     
     let morelist = [
-    "Daily Schedule",
     "GBHS Facebook",
     "Check Grades",
     "Campus Map",
-    "Import Event Calendar",
+    "Event Calendar",
     "Sports Schedule",
     "Early College",
     "External Links"]
     
     let imagelist = [
-    "Clock",
     "Facebook",
     "Grades",
     "Map",
@@ -33,7 +51,21 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
 
 
     override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.title="More"
+        
+        if (self.table.indexPathForSelectedRow() != nil) {
+            self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow()!, animated: true)
+        }
+        
+        if (objc_getClass("UIAlertController") != nil) {
+            //UIAlertController for iOS 8 +
+            alertControllerAvailable = true
+        }else{
+            //UIAlertView for iOS 7
+            alertControllerAvailable = false
+        }
     }
 
     //Number of sections in table
@@ -66,18 +98,29 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
     //Handle cell clicks
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
+        case 0:
+            performSegueWithIdentifier("FacebookSegue", sender: nil)
+        case 1:
+            performSegueWithIdentifier("GradesSegue", sender: nil)
         case 2:
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://studentvue.geneseeisd.org/GBCS/Login_Student_PXP.aspx")!)
-        case 3:
             performSegueWithIdentifier("MapSegue", sender: nil)
-        case 8:
-            UIApplication.sharedApplication().openURL(NSURL(string: "http://grandblanc.high.schoolfusion.us")!)
+        case 3:
+            performSegueWithIdentifier("CalendarSegue", sender: nil)
+        case 6:
+            performSegueWithIdentifier("ExternalSegue", sender: nil)
         default:
-            var alert = UIAlertController(title: "Table entry selected", message: "\(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
+            if alertControllerAvailable {
+                var alert = UIAlertController(title: "Table entry selected", message: "\(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+                self.presentViewController(alert, animated: true, completion: nil)
+            } else {
+                let alert = UIAlertView()
+                alert.title = "Table entry selected"
+                alert.message = "\(indexPath.row)"
+                alert.addButtonWithTitle("OK")
+                alert.show()
+            }
         }
-        
     }
 }
 

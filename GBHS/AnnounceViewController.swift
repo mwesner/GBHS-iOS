@@ -4,7 +4,11 @@ class AnnounceViewController: UITableViewController, UITableViewDataSource, UITa
     
     
     override func viewWillAppear(animated: Bool) {
-        self.title="Announcements"
+        super.viewWillAppear(animated)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
     }
     
     //Number of sections in table

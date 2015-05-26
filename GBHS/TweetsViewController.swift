@@ -16,5 +16,8 @@ class TweetsViewController: TWTRTimelineViewController {
                 self.presentViewController(alert, animated: true, completion: nil)
             }
         }
+        
+        //Prevent translucent nav bar from covering tweets
+        self.edgesForExtendedLayout = UIRectEdge.None
     }
 }
