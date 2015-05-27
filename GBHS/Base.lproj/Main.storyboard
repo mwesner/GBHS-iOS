@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGj-nX-eZq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -148,6 +149,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <textView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yFk-8R-zPP">
+                            <rect key="frame" x="0.0" y="150" width="600" height="100"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <string key="text">There will be a tone at 8:16, 9:20, 10:29, 12:05 and 1:09 to release travelers to their next class. All non-traveling students must remain in class until the official end of the period.</string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="TimesCell" textLabel="yuw-GM-AXP" detailTextLabel="CPB-C8-sx1" rowHeight="64" style="IBUITableViewCellStyleValue2" id="hya-8f-ecy">
                                 <autoresizingMask key="autoresizingMask"/>
@@ -192,7 +201,9 @@
                         </segmentedControl>
                     </navigationItem>
                     <connections>
+                        <outlet property="notice" destination="yFk-8R-zPP" id="mm1-a6-05v"/>
                         <outlet property="scheduleType" destination="5LQ-t8-mox" id="mnT-ta-2O6"/>
+                        <outlet property="txtNotice" destination="yFk-8R-zPP" id="m9m-9b-tCI"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dgP-Hm-kMl" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -291,6 +302,7 @@
                         <segue destination="YZw-wy-Tql" kind="presentation" identifier="FacebookSegue" id="LJO-WX-J9g"/>
                         <segue destination="qsw-Yb-mKh" kind="presentation" identifier="GradesSegue" id="Gzz-Eq-kcQ"/>
                         <segue destination="w9O-NG-5gu" kind="show" identifier="CalendarSegue" id="H87-9E-Zu0"/>
+                        <segue destination="Jlp-dX-lZf" kind="show" identifier="CollegeSegue" id="k0y-c1-9ox"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM7-Oi-0RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -423,10 +435,64 @@
             </objects>
             <point key="canvasLocation" x="4030" y="1946"/>
         </scene>
+        <!--Early College-->
+        <scene sceneID="pD3-87-Mku">
+            <objects>
+                <viewController id="Jlp-dX-lZf" customClass="CollegeViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gO5-xd-80e"/>
+                        <viewControllerLayoutGuide type="bottom" id="IMI-k0-wlM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="e56-Ng-9xp">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoZ-PM-p7a">
+                                <rect key="frame" x="16" y="180" width="568" height="325"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <mutableString key="text">Grand Blanc High School, in partnership with the University of Michigan–Flint, will be opening the Grand Blanc Early College (GBEC) during the 2015–2016 school year.  This exclusive opportunity will be available to Grand Blanc High School students entering Junior status in the 2015–2016 school year.  Enrollment will begin during the 2014–2015 school year.​</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p9v-H3-bei">
+                                <rect key="frame" x="261" y="513" width="79" height="30"/>
+                                <state key="normal" title="Learn More">
+                                    <color key="titleColor" red="0.40784313729999999" green="0.062745098040000002" blue="0.031372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="learnMore:" destination="Jlp-dX-lZf" eventType="touchUpInside" id="Dhf-9K-aNS"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CollegeBanner" translatesAutoresizingMaskIntoConstraints="NO" id="iaw-vg-Hvd">
+                                <rect key="frame" x="0.0" y="72" width="600" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="dWQ-NB-PuN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="iaw-vg-Hvd" firstAttribute="top" secondItem="gO5-xd-80e" secondAttribute="bottom" constant="8" symbolic="YES" id="2dI-df-n7a"/>
+                            <constraint firstItem="eoZ-PM-p7a" firstAttribute="top" secondItem="iaw-vg-Hvd" secondAttribute="bottom" constant="8" symbolic="YES" id="KkY-AP-bQx"/>
+                            <constraint firstItem="eoZ-PM-p7a" firstAttribute="centerX" secondItem="p9v-H3-bei" secondAttribute="centerX" id="PWx-Wu-ntD"/>
+                            <constraint firstItem="eoZ-PM-p7a" firstAttribute="leading" secondItem="e56-Ng-9xp" secondAttribute="leadingMargin" id="QW1-5z-uPx"/>
+                            <constraint firstItem="IMI-k0-wlM" firstAttribute="top" secondItem="p9v-H3-bei" secondAttribute="bottom" constant="8" symbolic="YES" id="WJf-xL-dwk"/>
+                            <constraint firstItem="iaw-vg-Hvd" firstAttribute="leading" secondItem="e56-Ng-9xp" secondAttribute="leading" id="h7M-zW-o48"/>
+                            <constraint firstItem="p9v-H3-bei" firstAttribute="top" secondItem="eoZ-PM-p7a" secondAttribute="bottom" constant="8" symbolic="YES" id="jsr-PV-1za"/>
+                            <constraint firstAttribute="trailing" secondItem="iaw-vg-Hvd" secondAttribute="trailing" id="oni-4i-mSh"/>
+                            <constraint firstItem="eoZ-PM-p7a" firstAttribute="centerX" secondItem="iaw-vg-Hvd" secondAttribute="centerX" id="qgH-pi-kRn"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Early College" id="OY1-yw-f1Q"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3PW-Xu-HRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4651" y="1946"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="E0W-cA-7ki">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PfX-5o-emz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="w9O-NG-5gu" customClass="CalendarViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Icy-Di-8pe"/>
@@ -458,6 +524,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PfX-5o-emz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3381" y="1946"/>
         </scene>
@@ -552,6 +619,7 @@
     <resources>
         <image name="Announce" width="25" height="25"/>
         <image name="Clock" width="25" height="25"/>
+        <image name="CollegeBanner" width="320" height="74"/>
         <image name="GBHS" width="256" height="256"/>
         <image name="Twitter" width="25" height="25"/>
     </resources>

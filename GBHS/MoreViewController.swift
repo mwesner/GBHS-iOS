@@ -106,20 +106,12 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
             performSegueWithIdentifier("MapSegue", sender: nil)
         case 3:
             performSegueWithIdentifier("CalendarSegue", sender: nil)
+        case 5:
+            performSegueWithIdentifier("CollegeSegue", sender: nil)
         case 6:
             performSegueWithIdentifier("ExternalSegue", sender: nil)
         default:
-            if alertControllerAvailable {
-                var alert = UIAlertController(title: "Table entry selected", message: "\(indexPath.row)", preferredStyle: UIAlertControllerStyle.Alert)
-                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
-                self.presentViewController(alert, animated: true, completion: nil)
-            } else {
-                let alert = UIAlertView()
-                alert.title = "Table entry selected"
-                alert.message = "\(indexPath.row)"
-                alert.addButtonWithTitle("OK")
-                alert.show()
-            }
+            println("No segue for row \(indexPath.row)")
         }
     }
 }

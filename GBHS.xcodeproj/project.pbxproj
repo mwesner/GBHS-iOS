@@ -11,6 +11,7 @@
 		3F37570D1ADF39970017223E /* GBHSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37570C1ADF39970017223E /* GBHSTests.swift */; };
 		3F3757171ADF39C00017223E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3757161ADF39C00017223E /* Images.xcassets */; };
 		3F5BE4881B121E2E00390F60 /* TimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BE4871B121E2E00390F60 /* TimesViewController.swift */; };
+		3F60C5111B16554A00C724EC /* CollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60C5101B16554A00C724EC /* CollegeViewController.swift */; };
 		3F7477CD1B10C77B0064A85E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7477CC1B10C77B0064A85E /* MapViewController.swift */; };
 		3F7477DD1B10CB440064A85E /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D11B10CB440064A85E /* AVFoundation.framework */; };
 		3F7477DE1B10CB440064A85E /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7477D21B10CB440064A85E /* CoreData.framework */; };
@@ -63,6 +64,9 @@
 		3F37570C1ADF39970017223E /* GBHSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHSTests.swift; sourceTree = "<group>"; };
 		3F3757161ADF39C00017223E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F5BE4871B121E2E00390F60 /* TimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesViewController.swift; sourceTree = "<group>"; };
+		3F60C50E1B16530100C724EC /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
+		3F60C50F1B16530100C724EC /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
+		3F60C5101B16554A00C724EC /* CollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeViewController.swift; sourceTree = "<group>"; };
 		3F7477CC1B10C77B0064A85E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		3F7477D11B10CB440064A85E /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3F7477D21B10CB440064A85E /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -93,8 +97,6 @@
 		3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
-		3FDB30441B14B619006346B5 /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
-		3FDB30451B14B619006346B5 /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				3F7477CC1B10C77B0064A85E /* MapViewController.swift */,
 				3FC9469C1B139EA00005A54D /* FacebookViewController.swift */,
 				3FC9469F1B13A2190005A54D /* ExternalViewController.swift */,
+				3F60C5101B16554A00C724EC /* CollegeViewController.swift */,
 				3FC946A51B142B000005A54D /* CalendarViewController.swift */,
 				3FC9469A1B138C310005A54D /* GradesViewController.swift */,
 				3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */,
@@ -259,7 +262,7 @@
 			);
 			name = GBHS;
 			productName = GBHS;
-			productReference = 3FDB30441B14B619006346B5 /* GBHS.app */;
+			productReference = 3F60C50E1B16530100C724EC /* GBHS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F3757051ADF39970017223E /* GBHSTests */ = {
@@ -277,7 +280,7 @@
 			);
 			name = GBHSTests;
 			productName = GBHSTests;
-			productReference = 3FDB30451B14B619006346B5 /* GBHSTests.xctest */;
+			productReference = 3F60C50F1B16530100C724EC /* GBHSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -374,6 +377,7 @@
 				3F3756F71ADF39970017223E /* AppDelegate.swift in Sources */,
 				3F7477CD1B10C77B0064A85E /* MapViewController.swift in Sources */,
 				3FC946A01B13A2190005A54D /* ExternalViewController.swift in Sources */,
+				3F60C5111B16554A00C724EC /* CollegeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
