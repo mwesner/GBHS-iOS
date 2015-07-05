@@ -2,6 +2,7 @@ import UIKit
 import Fabric
 import Crashlytics
 import TwitterKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
