@@ -29,8 +29,6 @@
 		3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */; };
 		3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */; };
 		3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */; };
-		52824A85939C9428F3F8A04E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD67360B7604F69151DA410E /* libPods.a */; };
-		FA14A4D921BD73E7B665FE03 /* libPods-GBHS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C07774E579D5937C51132CDA /* libPods-GBHS.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +42,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F1CFCA71B48F93C00745307 /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBHS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3F1CFCA81B48F93C00745307 /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBHSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F3756F51ADF39970017223E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3756F61ADF39970017223E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3756FB1ADF39970017223E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +57,7 @@
 		3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
 		3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
+		3F9925901B6F11EE002AC889 /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/newios/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
 		3FC9469A1B138C310005A54D /* GradesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesViewController.swift; sourceTree = "<group>"; };
 		3FC9469C1B139EA00005A54D /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		3FC9469F1B13A2190005A54D /* ExternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
@@ -70,9 +67,10 @@
 		3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
+		3FE974F71B6F11ED000F9323 /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/newios/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
 		787EB94768F4E09261A0F985 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		899F16F84E12AD46AA09B52F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		AD67360B7604F69151DA410E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B74FA574FFB9DAD0C62F417 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C07774E579D5937C51132CDA /* libPods-GBHS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GBHS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -85,8 +83,6 @@
 				3F841AC81B0F8C1000A2A4EA /* TwitterCore.framework in Frameworks */,
 				3F841ACA1B0F8C5800A2A4EA /* Crashlytics.framework in Frameworks */,
 				3F841AC61B0F8C1000A2A4EA /* TwitterKit.framework in Frameworks */,
-				FA14A4D921BD73E7B665FE03 /* libPods-GBHS.a in Frameworks */,
-				52824A85939C9428F3F8A04E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,8 +103,6 @@
 				3F3757091ADF39970017223E /* GBHSTests */,
 				3F7477ED1B10CDD50064A85E /* Frameworks */,
 				C8990901E6679BCFFED65DD8 /* Pods */,
-				3F1CFCA71B48F93C00745307 /* GBHS.app */,
-				3F1CFCA81B48F93C00745307 /* GBHSTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,7 +154,7 @@
 				3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */,
 				3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */,
 				C07774E579D5937C51132CDA /* libPods-GBHS.a */,
-				AD67360B7604F69151DA410E /* libPods.a */,
+				8B74FA574FFB9DAD0C62F417 /* Pods.framework */,
 			);
 			name = Frameworks;
 			path = GBHSTests;
@@ -214,6 +208,7 @@
 				3F3756EF1ADF39970017223E /* Resources */,
 				3F841ABF1B0F8BE700A2A4EA /* ShellScript */,
 				D97C4DD3C8336EA373BBF085 /* Copy Pods Resources */,
+				0FA892759C96BCC5B4B228A9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -221,7 +216,7 @@
 			);
 			name = GBHS;
 			productName = GBHS;
-			productReference = 3F1CFCA71B48F93C00745307 /* GBHS.app */;
+			productReference = 3FE974F71B6F11ED000F9323 /* GBHS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F3757051ADF39970017223E /* GBHSTests */ = {
@@ -239,7 +234,7 @@
 			);
 			name = GBHSTests;
 			productName = GBHSTests;
-			productReference = 3F1CFCA81B48F93C00745307 /* GBHSTests.xctest */;
+			productReference = 3F9925901B6F11EE002AC889 /* GBHSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -302,6 +297,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0FA892759C96BCC5B4B228A9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		3F841ABF1B0F8BE700A2A4EA /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 12;
