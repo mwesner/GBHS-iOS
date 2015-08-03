@@ -330,8 +330,15 @@
                             <outlet property="delegate" destination="Oq0-MB-yxp" id="h1f-39-wRN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="blg-v7-p8X"/>
+                    <navigationItem key="navigationItem" id="blg-v7-p8X">
+                        <barButtonItem key="rightBarButtonItem" title="About" id="jh5-vF-yrE">
+                            <connections>
+                                <action selector="showAbout:" destination="Oq0-MB-yxp" id="KJe-g6-wNJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="btnAbout" destination="jh5-vF-yrE" id="kD4-QI-nct"/>
                         <outlet property="table" destination="EBu-2Q-r8x" id="LHK-gk-q6m"/>
                         <segue destination="FGi-AX-yTV" kind="show" identifier="MapSegue" id="iFI-6C-DuL"/>
                         <segue destination="8I7-Fi-jnC" kind="show" identifier="ExternalSegue" id="mqz-Yk-opi"/>
@@ -547,7 +554,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Sports" id="GtW-a8-ZhO">
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Sport" id="GtW-a8-ZhO">
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -695,7 +702,7 @@
         <image name="Clock" width="25" height="25"/>
         <image name="CollegeBanner" width="320" height="74"/>
         <image name="GBHS" width="256" height="256"/>
-        <image name="Sports" width="25" height="25"/>
+        <image name="Sport" width="25" height="25"/>
         <image name="Twitter" width="25" height="25"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

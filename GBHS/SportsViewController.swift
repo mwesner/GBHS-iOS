@@ -29,7 +29,7 @@ class SportsViewController: UITableViewController, UITableViewDataSource, UITabl
         ("Bowling"),
         ("Cheer"),
         ("Running"),
-        ("Sports"),
+        ("Sport"),
         ("Golf"),
         ("Hockey"),
         ("Hockey"),

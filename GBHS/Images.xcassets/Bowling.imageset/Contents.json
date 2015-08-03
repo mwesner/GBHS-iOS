@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Bowling.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Bowling-50.png"
+      "filename" : "Bowling@2x.png"
     },
     {
       "idiom" : "universal",

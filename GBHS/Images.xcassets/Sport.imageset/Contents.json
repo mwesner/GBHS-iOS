@@ -3,11 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "CollegeBanner.png"
+      "filename" : "Sport.png"
     },
     {
       "idiom" : "universal",
-      "scale" : "2x"
+      "scale" : "2x",
+      "filename" : "Sport@2x.png"
     },
     {
       "idiom" : "universal",

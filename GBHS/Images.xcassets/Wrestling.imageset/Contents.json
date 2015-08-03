@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Wrestling.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Championship Belt-50.png"
+      "filename" : "Wrestling@2x.png"
     },
     {
       "idiom" : "universal",

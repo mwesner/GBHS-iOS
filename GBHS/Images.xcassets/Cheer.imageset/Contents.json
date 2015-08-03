@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Cheer.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Megaphone-50.png"
+      "filename" : "Cheer@2x.png"
     },
     {
       "idiom" : "universal",

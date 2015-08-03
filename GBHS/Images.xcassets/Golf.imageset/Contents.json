@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Golf.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Golf-50.png"
+      "filename" : "Golf@2x.png"
     },
     {
       "idiom" : "universal",

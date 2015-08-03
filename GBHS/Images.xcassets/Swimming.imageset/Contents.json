@@ -2,12 +2,13 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x"
+      "scale" : "1x",
+      "filename" : "Swimming.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "Swimming-50.png"
+      "filename" : "Swimming@2x.png"
     },
     {
       "idiom" : "universal",
