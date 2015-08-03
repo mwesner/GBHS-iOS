@@ -45,7 +45,7 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
     "Grades",
     "Map",
     "Calendar",
-    "Athletics",
+    "Sports",
     "College",
     "External"]
 
@@ -106,6 +106,8 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
             performSegueWithIdentifier("MapSegue", sender: nil)
         case 3:
             performSegueWithIdentifier("CalendarSegue", sender: nil)
+        case 4:
+            performSegueWithIdentifier("SportsSegue", sender: nil)
         case 5:
             performSegueWithIdentifier("CollegeSegue", sender: nil)
         case 6:

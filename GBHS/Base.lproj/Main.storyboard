@@ -339,6 +339,7 @@
                         <segue destination="qsw-Yb-mKh" kind="presentation" identifier="GradesSegue" id="Gzz-Eq-kcQ"/>
                         <segue destination="w9O-NG-5gu" kind="show" identifier="CalendarSegue" id="H87-9E-Zu0"/>
                         <segue destination="Jlp-dX-lZf" kind="show" identifier="CollegeSegue" id="k0y-c1-9ox"/>
+                        <segue destination="loV-jd-NhV" kind="show" identifier="SportsSegue" id="fMk-B7-aVL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM7-Oi-0RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -526,6 +527,43 @@
             </objects>
             <point key="canvasLocation" x="4651" y="1946"/>
         </scene>
+        <!--Sports View Controller-->
+        <scene sceneID="KGs-uF-2tS">
+            <objects>
+                <tableViewController id="loV-jd-NhV" customClass="SportsViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="G3N-0P-Zg2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="MoreCell" selectionStyle="blue" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SportsCell" textLabel="KwH-1A-Msh" imageView="GtW-a8-ZhO" style="IBUITableViewCellStyleDefault" id="dWL-Cw-D9s">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dWL-Cw-D9s" id="59l-Ik-PkV">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sport" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="KwH-1A-Msh">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="Sports" id="GtW-a8-ZhO">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </imageView>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="loV-jd-NhV" id="2xN-Cn-WL8"/>
+                            <outlet property="delegate" destination="loV-jd-NhV" id="aTa-za-74t"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uno-eo-qf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5270" y="1946"/>
+        </scene>
         <!--Calendar View Controller-->
         <scene sceneID="E0W-cA-7ki">
             <objects>
@@ -657,6 +695,7 @@
         <image name="Clock" width="25" height="25"/>
         <image name="CollegeBanner" width="320" height="74"/>
         <image name="GBHS" width="256" height="256"/>
+        <image name="Sports" width="25" height="25"/>
         <image name="Twitter" width="25" height="25"/>
     </resources>
     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

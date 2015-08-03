@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0789A01B6F20420055B982 /* SportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F07899F1B6F20420055B982 /* SportsViewController.swift */; };
+		3F0789A41B6F23B80055B982 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F0789A31B6F23B80055B982 /* Images.xcassets */; };
 		3F3756F71ADF39970017223E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F3756F61ADF39970017223E /* AppDelegate.swift */; };
 		3F37570D1ADF39970017223E /* GBHSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F37570C1ADF39970017223E /* GBHSTests.swift */; };
-		3F3757171ADF39C00017223E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F3757161ADF39C00017223E /* Images.xcassets */; };
 		3F505D611B48FB6B0096458C /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F7477CC1B10C77B0064A85E /* MapViewController.swift */; };
 		3F5BE4881B121E2E00390F60 /* TimesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5BE4871B121E2E00390F60 /* TimesViewController.swift */; };
 		3F60C5111B16554A00C724EC /* CollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60C5101B16554A00C724EC /* CollegeViewController.swift */; };
@@ -29,6 +30,7 @@
 		3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */; };
 		3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */; };
 		3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */; };
+		53ADBAB548E04A109420E3A3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B74FA574FFB9DAD0C62F417 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,13 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F07899D1B6F1FAC0055B982 /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBHS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F07899E1B6F1FAC0055B982 /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBHSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F07899F1B6F20420055B982 /* SportsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsViewController.swift; sourceTree = "<group>"; };
+		3F0789A31B6F23B80055B982 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F3756F51ADF39970017223E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F3756F61ADF39970017223E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F3756FB1ADF39970017223E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F3757001ADF39970017223E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		3F37570B1ADF39970017223E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F37570C1ADF39970017223E /* GBHSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBHSTests.swift; sourceTree = "<group>"; };
-		3F3757161ADF39C00017223E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F5BE4871B121E2E00390F60 /* TimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesViewController.swift; sourceTree = "<group>"; };
 		3F60C5101B16554A00C724EC /* CollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeViewController.swift; sourceTree = "<group>"; };
 		3F7477CC1B10C77B0064A85E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +62,6 @@
 		3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
 		3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
 		3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
-		3F9925901B6F11EE002AC889 /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/newios/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
 		3FC9469A1B138C310005A54D /* GradesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesViewController.swift; sourceTree = "<group>"; };
 		3FC9469C1B139EA00005A54D /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		3FC9469F1B13A2190005A54D /* ExternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +71,6 @@
 		3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
-		3FE974F71B6F11ED000F9323 /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/newios/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
 		787EB94768F4E09261A0F985 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		899F16F84E12AD46AA09B52F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		8B74FA574FFB9DAD0C62F417 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +86,7 @@
 				3F841AC81B0F8C1000A2A4EA /* TwitterCore.framework in Frameworks */,
 				3F841ACA1B0F8C5800A2A4EA /* Crashlytics.framework in Frameworks */,
 				3F841AC61B0F8C1000A2A4EA /* TwitterKit.framework in Frameworks */,
+				53ADBAB548E04A109420E3A3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +107,8 @@
 				3F3757091ADF39970017223E /* GBHSTests */,
 				3F7477ED1B10CDD50064A85E /* Frameworks */,
 				C8990901E6679BCFFED65DD8 /* Pods */,
+				3F07899D1B6F1FAC0055B982 /* GBHS.app */,
+				3F07899E1B6F1FAC0055B982 /* GBHSTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +119,7 @@
 				3FC946A21B14085E0005A54D /* Views */,
 				3F3756F61ADF39970017223E /* AppDelegate.swift */,
 				3F3756FA1ADF39970017223E /* Main.storyboard */,
-				3F3757161ADF39C00017223E /* Images.xcassets */,
+				3F0789A31B6F23B80055B982 /* Images.xcassets */,
 				3F3756FF1ADF39970017223E /* LaunchScreen.xib */,
 				3F3756F41ADF39970017223E /* Supporting Files */,
 			);
@@ -176,6 +182,7 @@
 				3FC9469C1B139EA00005A54D /* FacebookViewController.swift */,
 				3FC9469F1B13A2190005A54D /* ExternalViewController.swift */,
 				3F60C5101B16554A00C724EC /* CollegeViewController.swift */,
+				3F07899F1B6F20420055B982 /* SportsViewController.swift */,
 				3FC946A51B142B000005A54D /* CalendarViewController.swift */,
 				3FC9469A1B138C310005A54D /* GradesViewController.swift */,
 				3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */,
@@ -216,7 +223,7 @@
 			);
 			name = GBHS;
 			productName = GBHS;
-			productReference = 3FE974F71B6F11ED000F9323 /* GBHS.app */;
+			productReference = 3F07899D1B6F1FAC0055B982 /* GBHS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F3757051ADF39970017223E /* GBHSTests */ = {
@@ -234,7 +241,7 @@
 			);
 			name = GBHSTests;
 			productName = GBHSTests;
-			productReference = 3F9925901B6F11EE002AC889 /* GBHSTests.xctest */;
+			productReference = 3F07899E1B6F1FAC0055B982 /* GBHSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -281,9 +288,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F7982751B0FD739007FD42A /* LaunchScreen.xib in Resources */,
+				3F0789A41B6F23B80055B982 /* Images.xcassets in Resources */,
 				3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */,
 				3F841AC71B0F8C1000A2A4EA /* TwitterKitResources.bundle in Resources */,
-				3F3757171ADF39C00017223E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +375,7 @@
 				3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */,
 				3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */,
 				3F5BE4881B121E2E00390F60 /* TimesViewController.swift in Sources */,
+				3F0789A01B6F20420055B982 /* SportsViewController.swift in Sources */,
 				3FC9469D1B139EA00005A54D /* FacebookViewController.swift in Sources */,
 				3FD0D0951B0EDAD2007BDEBB /* FacultyViewController.swift in Sources */,
 				3FC9469B1B138C310005A54D /* GradesViewController.swift in Sources */,
