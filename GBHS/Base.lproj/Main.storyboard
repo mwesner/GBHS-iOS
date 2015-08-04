@@ -351,7 +351,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM7-Oi-0RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2744" y="1022"/>
+            <point key="canvasLocation" x="2760" y="1014"/>
         </scene>
         <!--Check Grades-->
         <scene sceneID="wM7-kL-zKv">
@@ -570,6 +570,110 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uno-eo-qf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5270" y="1946"/>
+        </scene>
+        <!--Sports Level View Controller-->
+        <scene sceneID="tzn-Ql-3kh">
+            <objects>
+                <tableViewController storyboardIdentifier="SportsLevelViewController" modalTransitionStyle="flipHorizontal" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xL6-tn-pqo" customClass="SportsLevelViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="GPh-JK-BCh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="LevelCell" textLabel="WjF-om-zEI" style="IBUITableViewCellStyleDefault" id="omp-mj-RG4">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="omp-mj-RG4" id="PGP-bm-VaB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sport Level" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WjF-om-zEI">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xL6-tn-pqo" id="HBf-YG-p10"/>
+                            <outlet property="delegate" destination="xL6-tn-pqo" id="hyN-TT-2y1"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3uX-SV-L0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5270" y="2606"/>
+        </scene>
+        <!--Sports Gender View Controller-->
+        <scene sceneID="AGA-mG-dBT">
+            <objects>
+                <tableViewController storyboardIdentifier="SportsGenderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XYL-2n-xIW" customClass="SportsGenderViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="fWH-pB-dU2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="GenderCell" textLabel="ySP-xF-ZDQ" style="IBUITableViewCellStyleDefault" id="BfZ-5u-CST">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BfZ-5u-CST" id="k3H-CH-WEv">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Sport Gender" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ySP-xF-ZDQ">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="XYL-2n-xIW" id="ZTe-Iq-hA5"/>
+                            <outlet property="delegate" destination="XYL-2n-xIW" id="BPx-Uy-Ysl"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MoN-7f-DxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5270" y="3250"/>
+        </scene>
+        <!--Sports Web View Controller-->
+        <scene sceneID="GZJ-x1-h1e">
+            <objects>
+                <viewController storyboardIdentifier="SportsWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAu-XB-xh7" customClass="SportsWebViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="d0X-bD-4I4"/>
+                        <viewControllerLayoutGuide type="bottom" id="vaa-c7-AaS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eQG-91-B5q">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KKT-gO-kBv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="delegate" destination="KAu-XB-xh7" id="lm0-wh-Zdo"/>
+                                </connections>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KKT-gO-kBv" firstAttribute="leading" secondItem="eQG-91-B5q" secondAttribute="leading" id="CQw-Jv-ikK"/>
+                            <constraint firstItem="KKT-gO-kBv" firstAttribute="bottom" secondItem="vaa-c7-AaS" secondAttribute="top" id="Rul-Vs-BRK"/>
+                            <constraint firstItem="KKT-gO-kBv" firstAttribute="top" secondItem="eQG-91-B5q" secondAttribute="top" id="SQ6-t1-PJD"/>
+                            <constraint firstAttribute="trailing" secondItem="KKT-gO-kBv" secondAttribute="trailing" id="oCM-06-8Ni"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="KKT-gO-kBv" id="Smy-XJ-a8G"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-kh-2Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5896" y="3246"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="E0W-cA-7ki">
