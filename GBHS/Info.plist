@@ -27,12 +27,14 @@
 	<key>Fabric</key>
 	<dict>
 		<key>APIKey</key>
-		<string>eeb59445384545e3aac40c481b2e93fb3c5269c8</string>
+		<string>1fe2143912a2f325a88f911c305ae84688a99ee7</string>
 		<key>Kits</key>
 		<array>
 			<dict>
 				<key>KitInfo</key>
 				<dict>
+                    <key>TODO</key>
+                    <string>Ensure these keys are replaced with the active release keys before publishing to the App Store.</string>
 					<key>consumerKey</key>
 					<string>wH2s5oPGqrcHiW5eygKY0c86F</string>
 					<key>consumerSecret</key>

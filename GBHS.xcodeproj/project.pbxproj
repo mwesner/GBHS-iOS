@@ -18,11 +18,6 @@
 		3F60C5111B16554A00C724EC /* CollegeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F60C5101B16554A00C724EC /* CollegeViewController.swift */; };
 		3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F3756FA1ADF39970017223E /* Main.storyboard */; };
 		3F7982751B0FD739007FD42A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F3756FF1ADF39970017223E /* LaunchScreen.xib */; };
-		3F841AC41B0F8C1000A2A4EA /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F841AC01B0F8C1000A2A4EA /* Fabric.framework */; };
-		3F841AC61B0F8C1000A2A4EA /* TwitterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */; };
-		3F841AC71B0F8C1000A2A4EA /* TwitterKitResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */; };
-		3F841AC81B0F8C1000A2A4EA /* TwitterCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */; };
-		3F841ACA1B0F8C5800A2A4EA /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */; };
 		3F9A49371B706923009E4DAF /* SportsWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F9A49361B706923009E4DAF /* SportsWebViewController.swift */; };
 		3FC9469B1B138C310005A54D /* GradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9469A1B138C310005A54D /* GradesViewController.swift */; };
 		3FC9469D1B139EA00005A54D /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9469C1B139EA00005A54D /* FacebookViewController.swift */; };
@@ -33,7 +28,6 @@
 		3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */; };
 		3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */; };
 		3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */; };
-		53ADBAB548E04A109420E3A3 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B74FA574FFB9DAD0C62F417 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,13 +54,6 @@
 		3F5BE4871B121E2E00390F60 /* TimesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesViewController.swift; sourceTree = "<group>"; };
 		3F60C5101B16554A00C724EC /* CollegeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollegeViewController.swift; sourceTree = "<group>"; };
 		3F7477CC1B10C77B0064A85E /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		3F841AC01B0F8C1000A2A4EA /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
-		3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterKit.framework; path = ../TwitterKit.framework; sourceTree = "<group>"; };
-		3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = TwitterKitResources.bundle; path = ../TwitterKit.framework/Versions/A/Resources/TwitterKitResources.bundle; sourceTree = "<group>"; };
-		3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TwitterCore.framework; path = ../TwitterCore.framework; sourceTree = "<group>"; };
-		3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
-		3F9A49341B702DD8009E4DAF /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = GBHS.app; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHS.app"; sourceTree = "<absolute>"; };
-		3F9A49351B702DD8009E4DAF /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = GBHSTests.xctest; path = "/Users/student/GBHS-iOS/build/Debug-iphoneos/GBHSTests.xctest"; sourceTree = "<absolute>"; };
 		3F9A49361B706923009E4DAF /* SportsWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SportsWebViewController.swift; sourceTree = "<group>"; };
 		3FC9469A1B138C310005A54D /* GradesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesViewController.swift; sourceTree = "<group>"; };
 		3FC9469C1B139EA00005A54D /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
@@ -77,10 +64,10 @@
 		3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetsViewController.swift; sourceTree = "<group>"; };
-		787EB94768F4E09261A0F985 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
-		899F16F84E12AD46AA09B52F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		8B74FA574FFB9DAD0C62F417 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C07774E579D5937C51132CDA /* libPods-GBHS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GBHS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE0092B1B780E960066A53A /* GBHS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GBHS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FE0092C1B780E960066A53A /* GBHSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBHSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65D2D7BE0DED43B17D1BEDB2 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		BCFD24F33E5AADA4A745109C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,11 +75,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F841AC41B0F8C1000A2A4EA /* Fabric.framework in Frameworks */,
-				3F841AC81B0F8C1000A2A4EA /* TwitterCore.framework in Frameworks */,
-				3F841ACA1B0F8C5800A2A4EA /* Crashlytics.framework in Frameworks */,
-				3F841AC61B0F8C1000A2A4EA /* TwitterKit.framework in Frameworks */,
-				53ADBAB548E04A109420E3A3 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,8 +93,9 @@
 			children = (
 				3F3756F31ADF39970017223E /* GBHS */,
 				3F3757091ADF39970017223E /* GBHSTests */,
-				3F7477ED1B10CDD50064A85E /* Frameworks */,
-				C8990901E6679BCFFED65DD8 /* Pods */,
+				3FE0092B1B780E960066A53A /* GBHS.app */,
+				3FE0092C1B780E960066A53A /* GBHSTests.xctest */,
+				AC0ACC38B6D73660325F4BFE /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,21 +138,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		3F7477ED1B10CDD50064A85E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				3F841AC91B0F8C5800A2A4EA /* Crashlytics.framework */,
-				3F841AC01B0F8C1000A2A4EA /* Fabric.framework */,
-				3F841AC11B0F8C1000A2A4EA /* TwitterKit.framework */,
-				3F841AC21B0F8C1000A2A4EA /* TwitterKitResources.bundle */,
-				3F841AC31B0F8C1000A2A4EA /* TwitterCore.framework */,
-				C07774E579D5937C51132CDA /* libPods-GBHS.a */,
-				8B74FA574FFB9DAD0C62F417 /* Pods.framework */,
-			);
-			name = Frameworks;
-			path = GBHSTests;
-			sourceTree = "<group>";
-		};
 		3FC946A11B1408510005A54D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -200,11 +168,11 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		C8990901E6679BCFFED65DD8 /* Pods */ = {
+		AC0ACC38B6D73660325F4BFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				787EB94768F4E09261A0F985 /* Pods.debug.xcconfig */,
-				899F16F84E12AD46AA09B52F /* Pods.release.xcconfig */,
+				65D2D7BE0DED43B17D1BEDB2 /* Pods.debug.xcconfig */,
+				BCFD24F33E5AADA4A745109C /* Pods.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -230,7 +198,7 @@
 			);
 			name = GBHS;
 			productName = GBHS;
-			productReference = 3F9A49341B702DD8009E4DAF /* GBHS.app */;
+			productReference = 3FE0092B1B780E960066A53A /* GBHS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3F3757051ADF39970017223E /* GBHSTests */ = {
@@ -248,7 +216,7 @@
 			);
 			name = GBHSTests;
 			productName = GBHSTests;
-			productReference = 3F9A49351B702DD8009E4DAF /* GBHSTests.xctest */;
+			productReference = 3FE0092C1B780E960066A53A /* GBHSTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -297,7 +265,6 @@
 				3F7982751B0FD739007FD42A /* LaunchScreen.xib in Resources */,
 				3F0789A41B6F23B80055B982 /* Images.xcassets in Resources */,
 				3F7982741B0FD6F4007FD42A /* Main.storyboard in Resources */,
-				3F841AC71B0F8C1000A2A4EA /* TwitterKitResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,8 +304,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
-			showEnvVarsInLog = 0;
+			shellScript = "\"${PODS_ROOT}/Fabric/Fabric.framework/run\" 1fe2143912a2f325a88f911c305ae84688a99ee7 8b0dd5eaef9747f97a442261a576ff0c9476d93567a94dd42a6b1b1652686aae";
 		};
 		512C0BA41DCAA0A99C960650 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -522,7 +488,7 @@
 		};
 		3F3757111ADF39970017223E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 787EB94768F4E09261A0F985 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 65D2D7BE0DED43B17D1BEDB2 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -546,7 +512,7 @@
 		};
 		3F3757121ADF39970017223E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 899F16F84E12AD46AA09B52F /* Pods.release.xcconfig */;
+			baseConfigurationReference = BCFD24F33E5AADA4A745109C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
