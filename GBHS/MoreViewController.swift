@@ -22,7 +22,7 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
         ("GBHS Facebook", "Facebook"),
         ("Check Grades", "Grades"),
         ("Campus Map", "Map"),
-        ("Event Calendar", "Calendar"),
+        ("Subscribe to Calendar", "Calendar"),
         ("Sports Schedule", "Sport"),
         ("Early College", "College"),
         ("External Links", "External")
@@ -75,7 +75,7 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
         case 2:
             performSegueWithIdentifier("MapSegue", sender: nil)
         case 3:
-            performSegueWithIdentifier("CalendarSegue", sender: nil)
+            UIApplication.sharedApplication().openURL(NSURL (string: "http://grandblanc.high.schoolfusion.us/modules/calendar/exportICal.php")!)
         case 4:
             performSegueWithIdentifier("SportsSegue", sender: nil)
         case 5:
