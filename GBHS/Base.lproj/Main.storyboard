@@ -481,7 +481,6 @@
                         <segue destination="8I7-Fi-jnC" kind="show" identifier="ExternalSegue" id="mqz-Yk-opi"/>
                         <segue destination="YZw-wy-Tql" kind="presentation" identifier="FacebookSegue" id="LJO-WX-J9g"/>
                         <segue destination="qsw-Yb-mKh" kind="presentation" identifier="GradesSegue" id="Gzz-Eq-kcQ"/>
-                        <segue destination="w9O-NG-5gu" kind="show" identifier="CalendarSegue" id="H87-9E-Zu0"/>
                         <segue destination="Jlp-dX-lZf" kind="show" identifier="CollegeSegue" id="k0y-c1-9ox"/>
                         <segue destination="loV-jd-NhV" kind="show" identifier="SportsSegue" id="fMk-B7-aVL"/>
                     </connections>

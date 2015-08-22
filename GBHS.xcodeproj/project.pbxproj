@@ -22,7 +22,6 @@
 		3FC9469B1B138C310005A54D /* GradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9469A1B138C310005A54D /* GradesViewController.swift */; };
 		3FC9469D1B139EA00005A54D /* FacebookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9469C1B139EA00005A54D /* FacebookViewController.swift */; };
 		3FC946A01B13A2190005A54D /* ExternalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC9469F1B13A2190005A54D /* ExternalViewController.swift */; };
-		3FC946A61B142B000005A54D /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC946A51B142B000005A54D /* CalendarViewController.swift */; };
 		3FD0D0931B0EDAC7007BDEBB /* AnnounceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0921B0EDAC7007BDEBB /* AnnounceViewController.swift */; };
 		3FD0D0951B0EDAD2007BDEBB /* FacultyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */; };
 		3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */; };
@@ -59,7 +58,6 @@
 		3FC9469A1B138C310005A54D /* GradesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradesViewController.swift; sourceTree = "<group>"; };
 		3FC9469C1B139EA00005A54D /* FacebookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookViewController.swift; sourceTree = "<group>"; };
 		3FC9469F1B13A2190005A54D /* ExternalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExternalViewController.swift; sourceTree = "<group>"; };
-		3FC946A51B142B000005A54D /* CalendarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		3FD0D0921B0EDAC7007BDEBB /* AnnounceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnounceViewController.swift; sourceTree = "<group>"; };
 		3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyViewController.swift; sourceTree = "<group>"; };
 		3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -162,20 +160,19 @@
 			isa = PBXGroup;
 			children = (
 				3FD0D0921B0EDAC7007BDEBB /* AnnounceViewController.swift */,
-				3F7477CC1B10C77B0064A85E /* MapViewController.swift */,
-				3FC9469C1B139EA00005A54D /* FacebookViewController.swift */,
-				3FC9469F1B13A2190005A54D /* ExternalViewController.swift */,
 				3F60C5101B16554A00C724EC /* CollegeViewController.swift */,
+				3FC9469F1B13A2190005A54D /* ExternalViewController.swift */,
+				3FC9469C1B139EA00005A54D /* FacebookViewController.swift */,
+				3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */,
+				3FC9469A1B138C310005A54D /* GradesViewController.swift */,
+				3F7477CC1B10C77B0064A85E /* MapViewController.swift */,
+				3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */,
 				3F07899F1B6F20420055B982 /* SportsViewController.swift */,
 				3F56B7C71B700E9800D32605 /* SportsLevelViewController.swift */,
 				3F56B7C91B700EA100D32605 /* SportsGenderViewController.swift */,
 				3F9A49361B706923009E4DAF /* SportsWebViewController.swift */,
-				3FC946A51B142B000005A54D /* CalendarViewController.swift */,
-				3FC9469A1B138C310005A54D /* GradesViewController.swift */,
-				3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */,
 				3F5BE4871B121E2E00390F60 /* TimesViewController.swift */,
-				3FD0D0941B0EDAD2007BDEBB /* FacultyViewController.swift */,
-				3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */,
+				3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -356,7 +353,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F505D611B48FB6B0096458C /* MapViewController.swift in Sources */,
-				3FC946A61B142B000005A54D /* CalendarViewController.swift in Sources */,
 				3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */,
 				3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */,
 				3F56B7CA1B700EA100D32605 /* SportsGenderViewController.swift in Sources */,
