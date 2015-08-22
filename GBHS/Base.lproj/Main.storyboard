@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGj-nX-eZq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="bGj-nX-eZq">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -613,7 +613,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHH-d0-q5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6454" y="2058"/>
+            <point key="canvasLocation" x="5806" y="2058"/>
         </scene>
         <!--Early College-->
         <scene sceneID="pD3-87-Mku">
@@ -668,7 +668,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PW-Xu-HRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7075" y="2058"/>
+            <point key="canvasLocation" x="6427" y="2058"/>
         </scene>
         <!--Sports View Controller-->
         <scene sceneID="KGs-uF-2tS">
@@ -705,7 +705,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uno-eo-qf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7694" y="2058"/>
+            <point key="canvasLocation" x="7046" y="2058"/>
         </scene>
         <!--Sports Level View Controller-->
         <scene sceneID="tzn-Ql-3kh">
@@ -739,7 +739,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uX-SV-L0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7694" y="2718"/>
+            <point key="canvasLocation" x="7046" y="2718"/>
         </scene>
         <!--Sports Gender View Controller-->
         <scene sceneID="AGA-mG-dBT">
@@ -773,7 +773,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoN-7f-DxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7694" y="3362"/>
+            <point key="canvasLocation" x="7046" y="3362"/>
         </scene>
         <!--Sports Web View Controller-->
         <scene sceneID="GZJ-x1-h1e">
@@ -809,45 +809,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-kh-2Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8320" y="3358"/>
-        </scene>
-        <!--Calendar View Controller-->
-        <scene sceneID="E0W-cA-7ki">
-            <objects>
-                <viewController id="w9O-NG-5gu" customClass="CalendarViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Icy-Di-8pe"/>
-                        <viewControllerLayoutGuide type="bottom" id="xDm-9e-Wzv"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9dd-KY-yem">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Calendar will appear here." borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZKU-cd-LUx">
-                                <rect key="frame" x="205" y="285" width="190" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="ZKU-cd-LUx" firstAttribute="centerY" secondItem="9dd-KY-yem" secondAttribute="centerY" id="qMi-bQ-VUI"/>
-                            <constraint firstItem="ZKU-cd-LUx" firstAttribute="centerX" secondItem="9dd-KY-yem" secondAttribute="centerX" id="xAU-aC-DYb"/>
-                        </constraints>
-                    </view>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="uTI-td-mIe">
-                        <barButtonItem key="rightBarButtonItem" title="Subscribe" id="xgs-nH-o4j">
-                            <connections>
-                                <action selector="onSubscribe:" destination="w9O-NG-5gu" id="hPB-cl-Hiu"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PfX-5o-emz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5805" y="2058"/>
+            <point key="canvasLocation" x="7672" y="3358"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="B7K-Tq-t6V">
