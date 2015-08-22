@@ -10,21 +10,21 @@ class FacultyViewController: UITableViewController, UITableViewDataSource, UITab
     }
     
     let admins = [
-        ("Jennifer Hammond", "Principal"),
-        ("Chris Belcher", "Assistant Principal"),
-        ("Gary Goetzinger", "Assistant Principal"),
-        ("Patricia Poelke", "Assistant Principal"),
-        ("Christy Knight", "CSS Student Advisor"),
-        ("Jerrod Dohm", "Athletic Director - Assistant Principal")
+        ("Jennifer Hammond", "Principal", "admin_hammond"),
+        ("Chris Belcher", "Assistant Principal", "admin_belcher"),
+        ("Gary Goetzinger", "Assistant Principal", "admin_gz"),
+        ("Patricia Poelke", "Assistant Principal", "admin_poelke"),
+        ("Christy Knight", "CSS Student Advisor", "admin_knight"),
+        ("Jerrod Dohm", "Athletic Director - Assistant Principal", "admin_dohm")
     ]
     
     let guidance = [
-        ("Mrs. Gardner", "O-Z"),
-        ("Mr. Hentes", "CSS"),
-        ("Mrs. Hall", "9th Grade"),
-        ("Mrs. Kernen", "Ge-N"),
-        ("Mrs. Mol", "A-Ga"),
-        ("Mrs. McCleary", "Secretary East")
+        ("Mrs. Gardner", "O-Z", "guidance_gardner"),
+        ("Mr. Hentes", "CSS", "guidance_hentes"),
+        ("Mrs. Hall", "9th Grade", "guidance_hall"),
+        ("Mrs. Kernen", "Ge-N", "guidance_kernen"),
+        ("Mrs. Mol", "A-Ga", "guidance_mol"),
+        ("Mrs. McCleary", "Secretary East", "guidance_mccleary")
     ]
     
     let staff = [
@@ -226,32 +226,50 @@ class FacultyViewController: UITableViewController, UITableViewDataSource, UITab
     //Contents of each cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let CellIdentifier: String = "FacultyCell"
+        var staffcell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("StaffCell") as! UITableViewCell?
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var officecell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("OfficeCell") as! UITableViewCell?
         
-        if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier)
+        if staffcell == nil {
+            staffcell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "StaffCell")
+        }
+        
+        if officecell == nil {
+            officecell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "OfficeCell")
         }
         
         switch selectControl.selectedSegmentIndex {
         case 0:
+              
             var staffName = staff[indexPath.row]
-            cell!.textLabel!.text = staffName
-            cell!.detailTextLabel!.text = " "
+            staffcell!.textLabel!.text = staffName
+            staffcell!.detailTextLabel!.text = " "
+            
+            return staffcell!
         case 1:
-            var (guidanceName, guidanceSubtitle) = guidance[indexPath.row]
-            cell!.textLabel!.text = guidanceName
-            cell!.detailTextLabel!.text = guidanceSubtitle
+            
+            var (guidanceName, guidanceSubtitle, guidanceImage) = guidance[indexPath.row]
+            officecell!.textLabel!.text = guidanceName
+            officecell!.detailTextLabel!.text = guidanceSubtitle
+            officecell!.imageView!.image = UIImage(named: guidanceImage)
+            
+            return officecell!
         case 2:
-            var (adminName, adminSubtitle) = admins[indexPath.row]
-            cell!.textLabel!.text = adminName
-            cell!.detailTextLabel!.text = adminSubtitle
+            
+            var (adminName, adminSubtitle, adminImage) = admins[indexPath.row]
+            officecell!.textLabel!.text = adminName
+            officecell!.detailTextLabel!.text = adminSubtitle
+            officecell!.imageView!.image = UIImage(named: adminImage)
+            
+            return officecell!
+            
         default:
-            cell!.textLabel!.text = " "
+            return staffcell!
         }
-        
-        return cell!
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("OfficeSegue", sender: nil)
     }
 }
 
