@@ -16,8 +16,6 @@ class SportsGenderViewController: UITableViewController, UITableViewDataSource, 
         let backItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
         
-        println(genderName)
-        
         if (tableView.indexPathForSelectedRow() != nil) {
             tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow()!, animated: true)
         }
