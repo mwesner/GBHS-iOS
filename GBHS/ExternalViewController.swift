@@ -30,10 +30,7 @@ class ExternalViewController: UITableViewController {
         
 
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)
-        
-        self.title = "External Links"
-        
+        super.viewWillAppear(true)        
         
         if (self.table.indexPathForSelectedRow != nil) {
             self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow!, animated: true)

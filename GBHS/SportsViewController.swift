@@ -77,8 +77,6 @@ class SportsViewController: UITableViewController, UIWebViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title = "Select Sport"
-        
         if (tableView.indexPathForSelectedRow != nil) {
             tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
         }

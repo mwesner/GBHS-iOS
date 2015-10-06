@@ -32,8 +32,6 @@ class MoreViewController: UITableViewController, UIWebViewDelegate {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.title="More"
-        
         if (self.table.indexPathForSelectedRow != nil) {
             self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow!, animated: true)
         }

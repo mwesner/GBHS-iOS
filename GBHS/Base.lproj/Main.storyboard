@@ -217,7 +217,7 @@
             </objects>
             <point key="canvasLocation" x="-380" y="356"/>
         </scene>
-        <!--Tweets View Controller-->
+        <!--GBHS Twitter-->
         <scene sceneID="pvS-te-fap">
             <objects>
                 <tableViewController id="YMz-88-fh5" customClass="TweetsViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,7 +231,7 @@
                             <outlet property="delegate" destination="YMz-88-fh5" id="SXD-9b-KD3"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="L4w-Je-g6J"/>
+                    <navigationItem key="navigationItem" title="GBHS Twitter" id="L4w-Je-g6J"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tBt-Av-9lK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -540,7 +540,7 @@
             </objects>
             <point key="canvasLocation" x="2122" y="1766"/>
         </scene>
-        <!--More View Controller-->
+        <!--More-->
         <scene sceneID="yh9-a3-TIT">
             <objects>
                 <tableViewController id="Oq0-MB-yxp" customClass="MoreViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
@@ -581,7 +581,7 @@
                             <outlet property="delegate" destination="Oq0-MB-yxp" id="h1f-39-wRN"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="blg-v7-p8X">
+                    <navigationItem key="navigationItem" title="More" id="blg-v7-p8X">
                         <barButtonItem key="rightBarButtonItem" title="About" id="jh5-vF-yrE">
                             <connections>
                                 <action selector="showAbout:" destination="Oq0-MB-yxp" id="KJe-g6-wNJ"/>
@@ -601,7 +601,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uM7-Oi-0RV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2760" y="1014"/>
+            <point key="canvasLocation" x="2744" y="1022"/>
         </scene>
         <!--Check Grades-->
         <scene sceneID="wM7-kL-zKv">
@@ -689,7 +689,7 @@
             </objects>
             <point key="canvasLocation" x="3918" y="2784"/>
         </scene>
-        <!--External View Controller-->
+        <!--External Links-->
         <scene sceneID="JnV-Xj-obg">
             <objects>
                 <tableViewController id="8I7-Fi-jnC" customClass="ExternalViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
@@ -733,7 +733,7 @@
                             <outlet property="delegate" destination="8I7-Fi-jnC" id="kJY-rc-f8f"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="jYJ-wf-XZb"/>
+                    <navigationItem key="navigationItem" title="External Links" id="jYJ-wf-XZb"/>
                     <connections>
                         <outlet property="table" destination="zVH-sb-gQx" id="jzq-Zf-ea2"/>
                     </connections>
@@ -801,7 +801,7 @@
             </objects>
             <point key="canvasLocation" x="6427" y="2058"/>
         </scene>
-        <!--Sports View Controller-->
+        <!--Select Sport-->
         <scene sceneID="KGs-uF-2tS">
             <objects>
                 <tableViewController id="loV-jd-NhV" customClass="SportsViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
@@ -842,6 +842,7 @@
                             <outlet property="delegate" destination="loV-jd-NhV" id="aTa-za-74t"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Select Sport" id="W3k-fC-7Yf"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uno-eo-qf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
