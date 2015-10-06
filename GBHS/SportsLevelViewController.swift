@@ -1,6 +1,6 @@
 import UIKit
 
-class SportsLevelViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate {
+class SportsLevelViewController: UITableViewController, UIWebViewDelegate {
     
     var sportName: String = ""
     
@@ -14,8 +14,8 @@ class SportsLevelViewController: UITableViewController, UITableViewDataSource, U
         
         self.title = sportName
         
-        if (tableView.indexPathForSelectedRow() != nil) {
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow()!, animated: true)
+        if (tableView.indexPathForSelectedRow != nil) {
+            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
         }
     }
     
@@ -29,7 +29,7 @@ class SportsLevelViewController: UITableViewController, UITableViewDataSource, U
         
         let CellIdentifier: String = "LevelCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)

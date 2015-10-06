@@ -1,6 +1,6 @@
 import UIKit
 
-class SportsViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate {
+class SportsViewController: UITableViewController, UIWebViewDelegate {
     
     var sport: Int = 0;
     var level: Int = 0;
@@ -79,8 +79,8 @@ class SportsViewController: UITableViewController, UITableViewDataSource, UITabl
         
         self.title = "Select Sport"
         
-        if (tableView.indexPathForSelectedRow() != nil) {
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow()!, animated: true)
+        if (tableView.indexPathForSelectedRow != nil) {
+            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
         }
     }
     
@@ -92,11 +92,11 @@ class SportsViewController: UITableViewController, UITableViewDataSource, UITabl
     //Contents of each cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var (name, icon) = sportslist[indexPath.row]
+        let (name, icon) = sportslist[indexPath.row]
         
         let CellIdentifier: String = "SportsCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
@@ -166,7 +166,7 @@ class SportsViewController: UITableViewController, UITableViewDataSource, UITabl
                 setJuniorVarsity()
                 setBoys()
             default:
-                println("Error selecting sport")
+                print("Error selecting sport", terminator: "")
         }
     
         let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("SportsLevelViewController") as! SportsLevelViewController
@@ -191,7 +191,7 @@ class SportsViewController: UITableViewController, UITableViewDataSource, UITabl
             viewController.genderarray = combined
         }
         
-        var (name, icon) = sportslist[indexPath.row]
+        let (name, _) = sportslist[indexPath.row]
         
         viewController.sportName = name
         

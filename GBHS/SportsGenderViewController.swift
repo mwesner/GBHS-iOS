@@ -1,6 +1,6 @@
 import UIKit
 
-class SportsGenderViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate {
+class SportsGenderViewController: UITableViewController, UIWebViewDelegate {
     
     var sportName: String = ""
     var levelName: String = ""
@@ -16,8 +16,8 @@ class SportsGenderViewController: UITableViewController, UITableViewDataSource, 
         let backItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
         
-        if (tableView.indexPathForSelectedRow() != nil) {
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow()!, animated: true)
+        if (tableView.indexPathForSelectedRow != nil) {
+            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
         }
     }
     
@@ -31,7 +31,7 @@ class SportsGenderViewController: UITableViewController, UITableViewDataSource, 
         
         let CellIdentifier: String = "GenderCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)

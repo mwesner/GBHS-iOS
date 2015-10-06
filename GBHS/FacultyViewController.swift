@@ -1,6 +1,6 @@
 import UIKit
 
-class FacultyViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class FacultyViewController: UITableViewController {
     
     @IBOutlet weak var selectControl: UISegmentedControl!
     
@@ -226,9 +226,9 @@ class FacultyViewController: UITableViewController, UITableViewDataSource, UITab
     //Contents of each cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var staffcell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("StaffCell") as! UITableViewCell?
+        var staffcell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("StaffCell") 
         
-        var officecell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("OfficeCell") as! UITableViewCell?
+        var officecell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier("OfficeCell") 
         
         if staffcell == nil {
             staffcell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: "StaffCell")
@@ -241,14 +241,14 @@ class FacultyViewController: UITableViewController, UITableViewDataSource, UITab
         switch selectControl.selectedSegmentIndex {
         case 0:
               
-            var staffName = staff[indexPath.row]
+            let staffName = staff[indexPath.row]
             staffcell!.textLabel!.text = staffName
             staffcell!.detailTextLabel!.text = " "
             
             return staffcell!
         case 1:
             
-            var (guidanceName, guidanceSubtitle, guidanceImage) = guidance[indexPath.row]
+            let (guidanceName, guidanceSubtitle, guidanceImage) = guidance[indexPath.row]
             officecell!.textLabel!.text = guidanceName
             officecell!.detailTextLabel!.text = guidanceSubtitle
             officecell!.imageView!.image = UIImage(named: guidanceImage)
@@ -256,7 +256,7 @@ class FacultyViewController: UITableViewController, UITableViewDataSource, UITab
             return officecell!
         case 2:
             
-            var (adminName, adminSubtitle, adminImage) = admins[indexPath.row]
+            let (adminName, adminSubtitle, adminImage) = admins[indexPath.row]
             officecell!.textLabel!.text = adminName
             officecell!.detailTextLabel!.text = adminSubtitle
             officecell!.imageView!.image = UIImage(named: adminImage)

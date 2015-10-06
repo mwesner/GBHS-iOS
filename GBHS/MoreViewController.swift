@@ -1,6 +1,6 @@
 import UIKit
 
-class MoreViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate, UIWebViewDelegate {
+class MoreViewController: UITableViewController, UIWebViewDelegate {
     
     @IBOutlet weak var btnAbout: UIBarButtonItem!
     
@@ -12,7 +12,7 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
         let message = "Developed by Grand Blanc CTE.\n\nTeam Leader:\n\nMichael Wesner\nAP Computer Science A instructor\n\n2015 members:\n\nCorey Rowe\nAaron Goodfellow\n\nIcons provided by Icons8\nhttp://icons8.com"
         let buttontitle = "Close"
         
-        var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: buttontitle, style: UIAlertActionStyle.Cancel, handler: nil))
         self.presentViewController(alert, animated: true, completion: nil)
     }
@@ -34,8 +34,8 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
         
         self.title="More"
         
-        if (self.table.indexPathForSelectedRow() != nil) {
-            self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow()!, animated: true)
+        if (self.table.indexPathForSelectedRow != nil) {
+            self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow!, animated: true)
         }
     }
 
@@ -51,11 +51,11 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
     
     //Contents of each cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var (title, icon) = morelist[indexPath.row]
+        let (title, icon) = morelist[indexPath.row]
         
         let CellIdentifier: String = "MoreCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
@@ -83,7 +83,7 @@ class MoreViewController: UITableViewController, UITableViewDataSource, UITableV
         case 6:
             performSegueWithIdentifier("ExternalSegue", sender: nil)
         default:
-            println("No segue for row \(indexPath.row)")
+            print("No segue for row \(indexPath.row)", terminator: "")
         }
     }
 }

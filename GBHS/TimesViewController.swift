@@ -1,6 +1,6 @@
 import UIKit
 
-class TimesViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class TimesViewController: UITableViewController {
     
     let fullday = [
         ("1st Hour", "7:20 - 8:19 (59 minutes)"),
@@ -115,7 +115,7 @@ class TimesViewController: UITableViewController, UITableViewDataSource, UITable
         
         let CellIdentifier: String = "TimesCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier)

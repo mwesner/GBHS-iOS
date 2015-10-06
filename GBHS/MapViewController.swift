@@ -26,10 +26,10 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        var east = CLLocationCoordinate2DMake(42.91995, -83.624859)
-        var west = CLLocationCoordinate2DMake(42.920577, -83.630655)
+        let east = CLLocationCoordinate2DMake(42.91995, -83.624859)
+        let west = CLLocationCoordinate2DMake(42.920577, -83.630655)
         
-        var eastmarker = GMSMarker()
+        let eastmarker = GMSMarker()
         eastmarker.position = east
         eastmarker.appearAnimation = kGMSMarkerAnimationPop
         eastmarker.title = "Grand Blanc High School"
@@ -37,7 +37,7 @@ class MapViewController: UIViewController {
         
         eastmarker.map = mapView
         
-        var westmarker = GMSMarker()
+        let westmarker = GMSMarker()
         westmarker.position = west
         westmarker.appearAnimation = kGMSMarkerAnimationPop
         westmarker.title = "Grand Blanc High School"

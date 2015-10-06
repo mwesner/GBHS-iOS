@@ -13,10 +13,10 @@ class SportsWebViewController: UIViewController, UIWebViewDelegate {
         
         self.title = genderName + " " + levelName + " " + sportName
         
-        var date: NSDate = NSDate()
-        var dateFormatter: NSDateFormatter = NSDateFormatter()
+        let date: NSDate = NSDate()
+        let dateFormatter: NSDateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy"
-        var DateInFormat: String = dateFormatter.stringFromDate(date)
+        let DateInFormat: String = dateFormatter.stringFromDate(date)
         
         let baseURL = "http://schedules.schedulestar.com/Grand-Blanc-High-School-Grand-Blanc-MI/season"
         

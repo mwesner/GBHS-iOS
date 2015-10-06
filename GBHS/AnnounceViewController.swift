@@ -1,6 +1,7 @@
 import Foundation
 import UIKit
 import SWXMLHash
+import Crashlytics
 import SystemConfiguration
 
 class AnnounceViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -25,18 +26,10 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         let urlString = "http://drive.google.com/uc?export=downloads&id=0B0YlVLIB047UQzRVclRBb2RFS00"
         
         if let myURL = NSURL(string: urlString) {
-            var error: NSError?
-            let myHTMLString = String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding, error: &error)
-            
-            if let error = error {
-                if Reachability.isConnectedToNetwork() == true {
-                    //Connection established, but scraper has failed.
-                    txtError.text = "Cannot parse announcements feed"
-                }else{
-                    //No internet connection.
-                    txtError.text = "Cannot connect to announcements feed"
-                }
-            } else {
+       
+            let myHTMLString: String?
+            do {
+                myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
                 
                 //Parse the XML
                 
@@ -61,10 +54,20 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
                         sort.append(1)
                     }
                 }
+
+            } catch let error as NSError {
+                myHTMLString = nil
                 
+                if Reachability.isConnectedToNetwork() == true {
+                    //Connection established, but scraper has failed.
+                    txtError.text = "Cannot parse announcements feed"
+                    
+                    Answers.logCustomEventWithName("Announcements parse failure: \(error.localizedDescription)", customAttributes: nil)
+                }else{
+                    //No internet connection.
+                    txtError.text = "Cannot connect to announcements feed"
+                }
             }
-        } else {
-            println("Error: \(urlString) is invalid.")
         }
     }
     
@@ -81,7 +84,7 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         if sort[indexPath.row] == 1 {
             let CellIdentifier: String = "AnnounceCell"
             
-            cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+            cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
             
             if cell == nil {
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
@@ -93,9 +96,8 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
             //Date cell, designed to act as a custom section header
             let CellIdentifier: String = "DateCell"
             
-            cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
-            
-            if cell == nil {
+            cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
+     if cell == nil {
                 cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
             }
             cell!.textLabel?.text = " "
@@ -106,29 +108,22 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
     
-    internal class Reachability {
-        
+    class Reachability {
         class func isConnectedToNetwork() -> Bool {
-            
-            var zeroAddress = sockaddr_in(sin_len: 0, sin_family: 0, sin_port: 0, sin_addr: in_addr(s_addr: 0), sin_zero: (0, 0, 0, 0, 0, 0, 0, 0))
+            var zeroAddress = sockaddr_in()
             zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
             zeroAddress.sin_family = sa_family_t(AF_INET)
-            
             let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
-                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0)).takeRetainedValue()
+                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
             }
-            
-            var flags: SCNetworkReachabilityFlags = 0
-            if SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) == 0 {
+            var flags = SCNetworkReachabilityFlags()
+            if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
                 return false
             }
-            
-            let isReachable = (flags & UInt32(kSCNetworkFlagsReachable)) != 0
-            let needsConnection = (flags & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
-            
-            return isReachable && !needsConnection
+            let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
+            let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+            return (isReachable && !needsConnection)
         }
-        
     }
 }
 

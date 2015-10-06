@@ -1,6 +1,6 @@
 import UIKit
 
-class ExternalViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
+class ExternalViewController: UITableViewController {
     
     @IBOutlet weak var selectControl: UISegmentedControl!
     
@@ -35,14 +35,10 @@ class ExternalViewController: UITableViewController, UITableViewDataSource, UITa
         self.title = "External Links"
         
         
-        if (self.table.indexPathForSelectedRow() != nil) {
-            self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow()!, animated: true)
+        if (self.table.indexPathForSelectedRow != nil) {
+            self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow!, animated: true)
         }
     }
-    
-    //override func viewWillDisappear(animated: Bool) {
-       // <#code#>
-    //}
     
     //Number of sections in table
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -57,11 +53,11 @@ class ExternalViewController: UITableViewController, UITableViewDataSource, UITa
     //Contents of each cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        var (title, link) = external[indexPath.row]
+        let (title, link) = external[indexPath.row]
         
         let CellIdentifier: String = "ExternalCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) as! UITableViewCell?
+        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
         
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier)
@@ -74,9 +70,8 @@ class ExternalViewController: UITableViewController, UITableViewDataSource, UITa
     
     //Open the selected link
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        var (title, link) = external[indexPath.item]
-        UIApplication.sharedApplication().openURL(NSURL(string: "http://" + link)!)
-        println(link)
+        let (_, link) = external[indexPath.item]
+        UIApplication.sharedApplication().openURL(NSURL(string: "https://" + link)!)
     }
 }
 
