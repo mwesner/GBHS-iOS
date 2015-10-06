@@ -16,7 +16,7 @@ class SportsViewController: UITableViewController, UIWebViewDelegate {
         ("Football", "Sport"),
         ("Golf", "Golf"),
         ("Ice Hockey", "Hockey"),
-        ("Lacrosse", "Hockey"),
+        ("Lacrosse", "Lacrosse"),
         ("Skiing", "Skiing"),
         ("Soccer", "Soccer"),
         ("Softball", "Baseball"),
