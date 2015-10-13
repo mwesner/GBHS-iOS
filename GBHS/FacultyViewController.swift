@@ -14,7 +14,7 @@ class FacultyViewController: UITableViewController {
         ("Chris Belcher", "Assistant Principal", "admin_belcher"),
         ("Gary Goetzinger", "Assistant Principal", "admin_gz"),
         ("Patricia Poelke", "Assistant Principal", "admin_poelke"),
-        ("Christy Knight", "CSS Student Advisor", "admin_knight"),
+        ("Jeremy Mitchell", "Student Advisor", "admin_mitchell"),
         ("Jerrod Dohm", "Athletic Director - Assistant Principal", "admin_dohm")
     ]
     
