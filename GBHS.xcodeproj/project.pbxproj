@@ -27,7 +27,7 @@
 		3FD0D0971B0EDADE007BDEBB /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0961B0EDADE007BDEBB /* MoreViewController.swift */; };
 		3FD0D0991B0EDAE5007BDEBB /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D0981B0EDAE5007BDEBB /* NavigationController.swift */; };
 		3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */; };
-		B0D826640278A3F1B1B6C10A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FA23B8BB8EF428137ADD62 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		B0D826640278A3F1B1B6C10A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FA23B8BB8EF428137ADD62 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
