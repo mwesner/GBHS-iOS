@@ -454,7 +454,7 @@
                                     <constraint firstAttribute="height" constant="29" id="5Q9-nr-wDJ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Name of Person" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NEq-Bm-bQo">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Name of Person" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="NEq-Bm-bQo">
                                 <rect key="frame" x="200" y="321" width="200" height="37"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
