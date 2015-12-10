@@ -9,7 +9,7 @@ class MoreViewController: UITableViewController, UIWebViewDelegate {
     @IBAction func showAbout(sender: UIBarButtonItem) {
         
         let title = "Grand Blanc High School"
-        let message = "Developed by Grand Blanc CTE.\n\nTeam Leader:\n\nMichael Wesner\nAP Computer Science A instructor\n\n2015 members:\n\nCorey Rowe\nAaron Goodfellow\n\nIcons provided by Icons8\nhttp://icons8.com"
+        let message = "Developed by Grand Blanc CTE.\n\nTeam Leader:\n\nMichael Wesner\nAP Computer Science A instructor\n\n2015 Members:\n\nCorey Rowe\nAaron Goodfellow\n\n2016 Members:\n\nMichael Olmsted\nBradley Kivett\n\nIcons provided by Icons8\nhttp://icons8.com"
         let buttontitle = "Close"
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
