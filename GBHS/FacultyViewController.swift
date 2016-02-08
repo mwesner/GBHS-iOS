@@ -648,11 +648,18 @@ class FacultyViewController: UITableViewController, MFMailComposeViewControllerD
         
         switch selectControl.selectedSegmentIndex {
         case 0:
-              
-            let staffName = staff[indexPath.row]
-            staffcell!.textLabel!.text = staffName
-            staffcell!.detailTextLabel!.text = " "
             
+            let staffName = staff[indexPath.row]
+            let selectedStaffEmail = staffEmail[indexPath.row]
+            
+            if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
+                //Device is an iPhone
+                staffcell!.textLabel!.text = staffName
+                staffcell!.detailTextLabel!.text = selectedStaffEmail
+            }else{
+                staffcell!.textLabel!.text = staffName
+                staffcell!.detailTextLabel!.text = ""
+            }
             return staffcell!
         case 1:
             
@@ -682,21 +689,16 @@ class FacultyViewController: UITableViewController, MFMailComposeViewControllerD
         let row = indexPath.row
         
         let actionSheetController: UIAlertController
-        
-        if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
-            //Device is an iPhone
             
-            actionSheetController = UIAlertController(title: staff[row], message: "Phones ring into the classroom so please make an effort to call before/after school or during a conference period.", preferredStyle: .ActionSheet)
-            if (staffPhone[row] != "NONE") {
-                let callAction: UIAlertAction = UIAlertAction(title: "Call " + staffPhone[row], style: .Default) { action -> Void in
-                    self.call(row)
-                }
-                actionSheetController.addAction(callAction)
-            }
-        }else{
-             actionSheetController = UIAlertController(title: staff[row], message: "", preferredStyle: .ActionSheet)
-        }
+        actionSheetController = UIAlertController(title: staff[row], message: "Phones ring into the classroom so please make an effort to call before/after school or during a conference period.", preferredStyle: .ActionSheet)
         
+        if (staffPhone[row] != "NONE") {
+            let callAction: UIAlertAction = UIAlertAction(title: "Call " + staffPhone[row], style: .Default) { action -> Void in
+                self.call(row)
+            }
+            actionSheetController.addAction(callAction)
+        }
+       
         let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
             if (self.tableView.indexPathForSelectedRow != nil) {
                 self.tableView.deselectRowAtIndexPath(self.tableView.indexPathForSelectedRow!, animated: true)
@@ -705,7 +707,6 @@ class FacultyViewController: UITableViewController, MFMailComposeViewControllerD
         
         actionSheetController.addAction(cancelAction)
         
-       
         if (staffEmail[row] != "NONE") {
             let emailAction: UIAlertAction = UIAlertAction(title: staffEmail[row], style: .Default) { action -> Void in
                     self.email(row)
@@ -761,7 +762,12 @@ class FacultyViewController: UITableViewController, MFMailComposeViewControllerD
         
         switch selectControl.selectedSegmentIndex {
         case 0:
-            showDialog(indexPath)
+            if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
+                //Device is an iPhone
+                showDialog(indexPath)
+            }else{
+                email(indexSelected)
+            }
         case 1:
             performSegueWithIdentifier("OfficeSegue", sender: indexSelected)
         case 2:

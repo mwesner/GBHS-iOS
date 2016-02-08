@@ -509,49 +509,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uP9-kV-vXH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1494" y="1836"/>
-        </scene>
-        <!--Staff View Controller-->
-        <scene sceneID="kWU-OV-lAz">
-            <objects>
-                <viewController storyboardIdentifier="popoverEdit" modalTransitionStyle="crossDissolve" modalPresentationStyle="overFullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="nlb-KW-s6O" customClass="StaffViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3zF-4E-E4V"/>
-                        <viewControllerLayoutGuide type="bottom" id="g1g-wE-Pwp"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="oh3-OY-Ytk">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xo6-3c-rgq">
-                                <rect key="frame" x="6" y="0.0" width="150" height="30"/>
-                                <state key="normal" title="(810)-594-2839">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="phoneButtonPress:" destination="nlb-KW-s6O" eventType="touchUpInside" id="3Xs-vw-AA1"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uZO-vj-3c8">
-                                <rect key="frame" x="6" y="28" width="150" height="30"/>
-                                <state key="normal" title="wez@gbschool.com">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="emailButtonPress:" destination="nlb-KW-s6O" eventType="touchUpInside" id="8A3-y0-bjM"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="emailButton" destination="uZO-vj-3c8" id="dUa-D2-heA"/>
-                        <outlet property="phoneButton" destination="Xo6-3c-rgq" id="w2l-7q-Qxo"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Oyp-1S-qan" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2122" y="1836"/>
+            <point key="canvasLocation" x="2122" y="1842"/>
         </scene>
         <!--More-->
         <scene sceneID="yh9-a3-TIT">
@@ -650,7 +608,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PlX-pR-BZK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4546" y="2784"/>
+            <point key="canvasLocation" x="3372" y="2562"/>
         </scene>
         <!--GBHS Facebook-->
         <scene sceneID="DYB-j6-hHf">
@@ -691,7 +649,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="65z-dg-G9V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3918" y="2784"/>
+            <point key="canvasLocation" x="2744" y="2562"/>
         </scene>
         <!--External Links-->
         <scene sceneID="JnV-Xj-obg">
@@ -739,7 +697,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHH-d0-q5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5806" y="2058"/>
+            <point key="canvasLocation" x="4632" y="1836"/>
         </scene>
         <!--Early College-->
         <scene sceneID="pD3-87-Mku">
@@ -794,7 +752,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3PW-Xu-HRz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6427" y="2058"/>
+            <point key="canvasLocation" x="5253" y="1836"/>
         </scene>
         <!--Select Sport-->
         <scene sceneID="KGs-uF-2tS">
@@ -836,7 +794,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uno-eo-qf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7046" y="2058"/>
+            <point key="canvasLocation" x="5872" y="1836"/>
         </scene>
         <!--Sports Level View Controller-->
         <scene sceneID="tzn-Ql-3kh">
@@ -873,7 +831,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3uX-SV-L0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7046" y="2718"/>
+            <point key="canvasLocation" x="5872" y="2496"/>
         </scene>
         <!--Sports Gender View Controller-->
         <scene sceneID="AGA-mG-dBT">
@@ -910,7 +868,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MoN-7f-DxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7046" y="3362"/>
+            <point key="canvasLocation" x="5872" y="3140"/>
         </scene>
         <!--Sports Web View Controller-->
         <scene sceneID="GZJ-x1-h1e">
@@ -946,7 +904,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-kh-2Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7670" y="3362"/>
+            <point key="canvasLocation" x="6496" y="3140"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="B7K-Tq-t6V">
@@ -964,7 +922,7 @@
                     <navigationItem key="navigationItem" id="Pyy-rv-Qqg">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="p7D-A7-zh2">
-                            <rect key="frame" x="20" y="7.5" width="560" height="29"/>
+                            <rect key="frame" x="20" y="8" width="560" height="29"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Standard"/>
@@ -984,7 +942,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3My-jv-cgQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5168" y="2058"/>
+            <point key="canvasLocation" x="3994" y="1836"/>
         </scene>
         <!--Schedule-->
         <scene sceneID="JkH-wU-DTq">
@@ -1017,7 +975,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cu1-jA-OEx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3918" y="2058"/>
+            <point key="canvasLocation" x="2744" y="1836"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="TxJ-9A-hqd">
@@ -1033,7 +991,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hH-NX-4kS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4546" y="2058"/>
+            <point key="canvasLocation" x="3372" y="1836"/>
         </scene>
     </scenes>
     <resources>
