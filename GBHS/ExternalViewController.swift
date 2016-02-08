@@ -30,7 +30,7 @@ class ExternalViewController: UITableViewController {
         
 
     override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(true)        
+        super.viewWillAppear(animated)
         
         if (self.table.indexPathForSelectedRow != nil) {
             self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow!, animated: true)
