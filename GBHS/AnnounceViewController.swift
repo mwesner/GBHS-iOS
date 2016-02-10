@@ -27,9 +27,12 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if let myURL = NSURL(string: urlString) {
        
-            let myHTMLString: String?
+            var myHTMLString: String?
             do {
                 myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
+                
+                //Add <root> tag, so XML only has one root tag
+                myHTMLString = "<root>\n" + myHTMLString! + "</root>"
                 
                 //Parse the XML
                 
