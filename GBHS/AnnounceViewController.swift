@@ -21,7 +21,7 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 160.0
+        tableView.estimatedRowHeight = 220.0
         
         let urlString = "http://drive.google.com/uc?export=downloads&id=0B0YlVLIB047UQzRVclRBb2RFS00"
         
