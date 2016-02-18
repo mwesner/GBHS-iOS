@@ -1,6 +1,7 @@
 import UIKit
+import MessageUI
 
-class FacultyViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
+class FacultyViewController: UITableViewController, MFMailComposeViewControllerDelegate  {
     
     var index: Int?
     
@@ -604,7 +605,11 @@ class FacultyViewController: UITableViewController, UIPopoverPresentationControl
     
     //Set the styling for the view.
     override func viewWillAppear(animated: Bool) {
-        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: true)
+        super.viewWillAppear(animated)
+        
+        if (self.tableView.indexPathForSelectedRow != nil) {
+            self.tableView.deselectRowAtIndexPath(self.tableView.indexPathForSelectedRow!, animated: true)
+        }
     }
     
     //Number of sections in table
@@ -643,11 +648,18 @@ class FacultyViewController: UITableViewController, UIPopoverPresentationControl
         
         switch selectControl.selectedSegmentIndex {
         case 0:
-              
-            let staffName = staff[indexPath.row]
-            staffcell!.textLabel!.text = staffName
-            staffcell!.detailTextLabel!.text = " "
             
+            let staffName = staff[indexPath.row]
+            let selectedStaffEmail = staffEmail[indexPath.row]
+            
+            if (UIDevice.currentDevice().userInterfaceIdiom == .Pad) {
+                //Device is an iPhone
+                staffcell!.textLabel!.text = staffName
+                staffcell!.detailTextLabel!.text = selectedStaffEmail
+            }else{
+                staffcell!.textLabel!.text = staffName
+                staffcell!.detailTextLabel!.text = ""
+            }
             return staffcell!
         case 1:
             
@@ -672,34 +684,90 @@ class FacultyViewController: UITableViewController, UIPopoverPresentationControl
     }
     
     //Show the staff emails and phone numbers.
-    func showPopover(indexPath: NSIndexPath) {
+    func showDialog(indexPath: NSIndexPath) {
+        
         let row = indexPath.row
         
-        let vc = self.storyboard?.instantiateViewControllerWithIdentifier("popoverEdit") as! StaffViewController!
-        vc.phone = staffPhone[row]
-        vc.email = staffEmail[row]
-        vc.modalPresentationStyle = .Popover
-        vc.preferredContentSize = CGSizeMake(164, 58)
-        
-        let cell = tableView.cellForRowAtIndexPath(indexPath)
-        
-        if let presentationController = vc.popoverPresentationController {
-            presentationController.delegate = self
-            presentationController.permittedArrowDirections = .Left
-            presentationController.sourceView = cell
-            presentationController.sourceRect = CGRectMake(80, 0, 50, 50)
+        let actionSheetController: UIAlertController
             
-            self.presentViewController(vc, animated: true, completion: nil)
+        actionSheetController = UIAlertController(title: staff[row], message: "Phones ring into the classroom so please make an effort to call before/after school or during a conference period.", preferredStyle: .ActionSheet)
+        
+        if (staffPhone[row] != "NONE") {
+            let callAction: UIAlertAction = UIAlertAction(title: "Call " + staffPhone[row], style: .Default) { action -> Void in
+                self.call(row)
+            }
+            actionSheetController.addAction(callAction)
+        }
+       
+        let cancelAction: UIAlertAction = UIAlertAction(title: "Cancel", style: .Cancel) { action -> Void in
+            if (self.tableView.indexPathForSelectedRow != nil) {
+                self.tableView.deselectRowAtIndexPath(self.tableView.indexPathForSelectedRow!, animated: true)
+            }
+        }
+        
+        actionSheetController.addAction(cancelAction)
+        
+        if (staffEmail[row] != "NONE") {
+            let emailAction: UIAlertAction = UIAlertAction(title: staffEmail[row], style: .Default) { action -> Void in
+                    self.email(row)
+            }
+            actionSheetController.addAction(emailAction)
+        }
+        
+        if let popoverController = actionSheetController.popoverPresentationController {
+            let cell = tableView.cellForRowAtIndexPath(indexPath)
+            popoverController.sourceView = cell
+            popoverController.sourceRect = CGRectMake(80, 0, 50, 50)
+        }
+        self.presentViewController(actionSheetController, animated: true, completion: nil)
+    
+    }
+    
+    //Call the staff member when pressed.
+    func call(row: Int) {
+        let phoneCall = "tel://" + self.staffPhone[row]
+        let number = phoneCall.stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        
+        //Execute the call
+        UIApplication.sharedApplication().openURL(NSURL(string: number)!)
+
+    }
+    
+    //Email the staff member when pressed.
+    func email(row: Int) {
+        let mailComposeViewController = configuredMailComposeViewController(row)
+        if MFMailComposeViewController.canSendMail() {
+            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
         }
     }
     
-    //Called when an item is selected. Open popover for staff, OfficeView for others.
+    func configuredMailComposeViewController(row: Int) -> MFMailComposeViewController {
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        
+        mailComposerVC.setToRecipients([staffEmail[row]])
+        
+        return mailComposerVC
+    }
+    
+    // MARK: MFMailComposeViewControllerDelegate Method
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        controller.dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    
+    //Called when an item is selected. Open action sheet for staff, OfficeView for others.
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let indexSelected = indexPath.row
         
         switch selectControl.selectedSegmentIndex {
         case 0:
-            showPopover(indexPath)
+            if (UIDevice.currentDevice().userInterfaceIdiom == .Phone) {
+                //Device is an iPhone
+                showDialog(indexPath)
+            }else{
+                email(indexSelected)
+            }
         case 1:
             performSegueWithIdentifier("OfficeSegue", sender: indexSelected)
         case 2:

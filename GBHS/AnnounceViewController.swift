@@ -21,15 +21,18 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         super.viewDidLoad()
         
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 160.0
+        tableView.estimatedRowHeight = 220.0
         
         let urlString = "http://drive.google.com/uc?export=downloads&id=0B0YlVLIB047UQzRVclRBb2RFS00"
         
         if let myURL = NSURL(string: urlString) {
        
-            let myHTMLString: String?
+            var myHTMLString: String?
             do {
                 myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
+                
+                //Add <root> tag, so XML only has one root tag
+                myHTMLString = "<root>\n" + myHTMLString! + "</root>"
                 
                 //Parse the XML
                 

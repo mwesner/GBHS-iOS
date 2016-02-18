@@ -67,9 +67,9 @@ class TimesViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.estimatedRowHeight = 44.0 // Replace with your actual estimation
-        // Automatic dimensions to tell the table view to use dynamic height
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 44.0
+    
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -120,7 +120,8 @@ class TimesViewController: UITableViewController {
         if cell == nil {
             cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier)
         }
-        cell!.textLabel!.text = hour
+        cell!.textLabel?.text = hour
+        cell!.detailTextLabel?.numberOfLines = 0
         cell!.detailTextLabel!.text = time
         return cell!
     }
