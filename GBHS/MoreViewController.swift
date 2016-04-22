@@ -67,9 +67,15 @@ class MoreViewController: UITableViewController, UIWebViewDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         switch indexPath.row {
         case 0:
-            performSegueWithIdentifier("FacebookSegue", sender: nil)
+            let url = "https://m.facebook.com/GrandBlancHighSchool"
+            
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+            //performSegueWithIdentifier("FacebookSegue", sender: nil)
         case 1:
-            performSegueWithIdentifier("GradesSegue", sender: nil)
+            let url = "https://studentvue.geneseeisd.org/GBCS/Login_Student_PXP.aspx"
+            
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+            //performSegueWithIdentifier("GradesSegue", sender: nil)
         case 2:
             performSegueWithIdentifier("MapSegue", sender: nil)
         case 3:

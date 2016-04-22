@@ -68,8 +68,18 @@ class ExternalViewController: UITableViewController {
     //Open the selected link
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let (_, link) = external[indexPath.item]
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        UIApplication.sharedApplication().openURL(NSURL(string: "https://" + link)!)
+        
+        //Used to determine if the link should use https
+        switch indexPath.item {
+        case 2, 3, 7, 8, 12, 14:
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://" + link)!)
+            break;
+        default:
+            UIApplication.sharedApplication().openURL(NSURL(string: "https://" + link)!)
+            break;
+        }
     }
 }
 

@@ -45,14 +45,44 @@ class SportsGenderViewController: UITableViewController, UIWebViewDelegate {
         
         genderName = genderarray[indexPath.row]
         
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("SportsWebViewController") as! SportsWebViewController
+        /*let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("SportsWebViewController") as! SportsWebViewController
         
         viewController.sportName = sportName
         viewController.levelName = levelName
         viewController.genderName = genderName
         
         self.navigationController?.pushViewController(viewController, animated: true)
+        */
         
+        let date: NSDate = NSDate()
+        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "MM-dd-yyyy"
+        let DateInFormat: String = dateFormatter.stringFromDate(date)
+        
+        let baseURL = "http://schedules.schedulestar.com/Grand-Blanc-High-School-Grand-Blanc-MI/season"
+        
+        let fullURL = baseURL + "/" + DateInFormat + "/" + genderName + "/" + levelName + "/" + sportName
+        
+        let url = fullURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        
+        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("MoreViewController") as! MoreViewController
+        
+        UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        
+        delay(0.5) {
+            self.navigationController?.pushViewController(viewController, animated: false)
+        }
+    }
+    
+    func delay(delay: Double, closure: ()->()) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(),
+            closure
+        )
     }
 }
 
