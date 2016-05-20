@@ -1,12 +1,22 @@
-platform :ios, '8.0'
-use_frameworks!
+# Uncomment this line to define a global platform for your project
+# platform :ios, '9.0'
 
-xcodeproj 'GBHS'
+target 'GBHS' do
+  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
 
-pod 'Fabric'
-pod 'Crashlytics'
-pod 'TwitterCore'
-pod 'TwitterKit'
+  # Pods for GBHS
+  pod 'Fabric'
+  pod 'Crashlytics'
+  pod 'TwitterCore' 
+  pod 'TwitterKit'
 
-pod 'GoogleMaps'
-pod 'SWXMLHash'
+  pod 'GoogleMaps'
+  pod 'SWXMLHash'
+
+  target 'GBHSTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
