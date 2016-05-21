@@ -45,14 +45,14 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
                     imgError.hidden = true
                 }
                 
-                for var i = 0; i < xml["root"]["group"].all.count; ++i {
+                for i in 0..<xml["root"]["group"].all.count {
                     
-                    for var j = 0; j < xml["root"]["group"][i]["date"].all.count; ++j {
+                    for j in 0..<xml["root"]["group"][i]["date"].all.count{
                         announcements.append(xml["root"]["group"][i]["date"][j].element!.text!)
                         sort.append(0)
                     }
                     
-                    for var k = 0; k < xml["root"]["group"][i]["announcement"].all.count; ++k {
+                    for k in 0..<xml["root"]["group"][i]["announcement"].all.count {
                         announcements.append(xml["root"]["group"][i]["announcement"][k].element!.text!)
                         sort.append(1)
                     }
