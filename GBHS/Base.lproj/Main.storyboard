@@ -873,7 +873,6 @@
         <!--Sports Web View Controller-->
         <scene sceneID="GZJ-x1-h1e">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-kh-2Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SportsWebViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KAu-XB-xh7" customClass="SportsWebViewController" customModule="GBHS" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="d0X-bD-4I4"/>
@@ -903,6 +902,7 @@
                         <outlet property="webView" destination="KKT-gO-kBv" id="Smy-XJ-a8G"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zhv-kh-2Ef" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6496" y="3140"/>
         </scene>

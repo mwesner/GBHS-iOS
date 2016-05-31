@@ -14,65 +14,29 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var announcements: [String] = []
     
+    var refreshControl: UIRefreshControl!
+    
     //Track type: 0 is date (header), 1 is announcement
     var sort: [Int] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        tableView.addSubview(refreshControl)
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 220.0
         
-        let urlString = "http://drive.google.com/uc?export=downloads&id=0B0YlVLIB047UQzRVclRBb2RFS00"
-        
-        if let myURL = NSURL(string: urlString) {
-       
-            var myHTMLString: String?
-            do {
-                myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
-                
-                //Add <root> tag, so XML only has one root tag
-                myHTMLString = "<root>\n" + myHTMLString! + "</root>"
-                
-                //Parse the XML
-                
-                let xml = SWXMLHash.parse(myHTMLString!)
-                
-                if xml["root"]["group"].all.count > 0 {
-                    //Announcements present.
-                    tableView.hidden = false
-                    txtError.hidden = true
-                    imgError.hidden = true
-                }
-                
-                for i in 0..<xml["root"]["group"].all.count {
-                    
-                    for j in 0..<xml["root"]["group"][i]["date"].all.count{
-                        announcements.append(xml["root"]["group"][i]["date"][j].element!.text!)
-                        sort.append(0)
-                    }
-                    
-                    for k in 0..<xml["root"]["group"][i]["announcement"].all.count {
-                        announcements.append(xml["root"]["group"][i]["announcement"][k].element!.text!)
-                        sort.append(1)
-                    }
-                }
-
-            } catch let error as NSError {
-                myHTMLString = nil
-                
-                if Reachability.isConnectedToNetwork() == true {
-                    //Connection established, but scraper has failed.
-                    txtError.text = "Cannot parse announcements feed"
-                    
-                    Answers.logCustomEventWithName("Announcements parse failure: \(error.localizedDescription)", customAttributes: nil)
-                }else{
-                    //No internet connection.
-                    txtError.text = "Cannot connect to announcements feed"
-                }
-            }
-        }
+        getAnnouncements()
     }
+    
+    func refresh(sender:AnyObject) {
+        getAnnouncements()
+    }
+    
     
     //Number of rows in table
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -109,6 +73,59 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         
         return cell!
         
+    }
+    
+    func getAnnouncements() {
+        let urlString = "http://drive.google.com/uc?export=downloads&id=0B0YlVLIB047UQzRVclRBb2RFS00"
+        
+        if let myURL = NSURL(string: urlString) {
+            
+            var myHTMLString: String?
+            do {
+                myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
+                
+                //Add <root> tag, so XML only has one root tag
+                myHTMLString = "<root>\n" + myHTMLString! + "</root>"
+                
+                //Parse the XML
+                
+                let xml = SWXMLHash.parse(myHTMLString!)
+                
+                if xml["root"]["group"].all.count > 0 {
+                    //Announcements present.
+                    tableView.hidden = false
+                    txtError.hidden = true
+                    imgError.hidden = true
+                }
+                
+                for i in 0..<xml["root"]["group"].all.count {
+                    
+                    for j in 0..<xml["root"]["group"][i]["date"].all.count{
+                        announcements.append(xml["root"]["group"][i]["date"][j].element!.text!)
+                        sort.append(0)
+                    }
+                    
+                    for k in 0..<xml["root"]["group"][i]["announcement"].all.count {
+                        announcements.append(xml["root"]["group"][i]["announcement"][k].element!.text!)
+                        sort.append(1)
+                    }
+                }
+                
+            } catch let error as NSError {
+                myHTMLString = nil
+                
+                if Reachability.isConnectedToNetwork() == true {
+                    //Connection established, but scraper has failed.
+                    txtError.text = "Cannot parse announcements feed"
+                    
+                    Answers.logCustomEventWithName("Announcements parse failure: \(error.localizedDescription)", customAttributes: nil)
+                }else{
+                    //No internet connection.
+                    txtError.text = "Cannot connect to announcements feed"
+                }
+            }
+        }
+        refreshControl.endRefreshing()
     }
     
     class Reachability {
