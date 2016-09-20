@@ -30,7 +30,6 @@
 		3FD0D09B1B0EDAEA007BDEBB /* TweetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FD0D09A1B0EDAEA007BDEBB /* TweetsViewController.swift */; };
 		7ADA524562851BDA3D92B3EF /* Pods_GBHSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FD2B5E2A90E15E57662BF93 /* Pods_GBHSTests.framework */; };
 		8DCFFC7F5139A30063C5C240 /* Pods_GBHS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3A1D3647B50C8EB5368D80D /* Pods_GBHS.framework */; };
-		B0D826640278A3F1B1B6C10A /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FA23B8BB8EF428137ADD62 /* Pods.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,7 +84,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0D826640278A3F1B1B6C10A /* Pods.framework in Frameworks */,
 				8DCFFC7F5139A30063C5C240 /* Pods_GBHS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

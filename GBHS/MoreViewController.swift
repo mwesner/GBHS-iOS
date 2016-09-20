@@ -72,7 +72,7 @@ class MoreViewController: UITableViewController, UIWebViewDelegate {
             UIApplication.sharedApplication().openURL(NSURL(string: url)!)
             //performSegueWithIdentifier("FacebookSegue", sender: nil)
         case 1:
-            let url = "https://studentvue.geneseeisd.org/GBCS/Login_Student_PXP.aspx"
+            let url = "https://login.jupitered.com/login/?73825"
             
             UIApplication.sharedApplication().openURL(NSURL(string: url)!)
             //performSegueWithIdentifier("GradesSegue", sender: nil)
