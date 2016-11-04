@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "guidance_hall.jpg"
+      "filename" : "guidance_hall.jpg",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "admin_dohm.jpg"
+      "filename" : "admin_dohm.jpg",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

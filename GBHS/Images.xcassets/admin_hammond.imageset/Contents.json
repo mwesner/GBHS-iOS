@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "admin_hammond.jpg"
+      "filename" : "admin_hammond.jpg",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",

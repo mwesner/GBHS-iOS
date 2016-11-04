@@ -2,8 +2,8 @@
   "images" : [
     {
       "idiom" : "universal",
-      "scale" : "1x",
-      "filename" : "guidance_kernen.jpg"
+      "filename" : "guidance_kernen.jpg",
+      "scale" : "1x"
     },
     {
       "idiom" : "universal",
