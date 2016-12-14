@@ -25,15 +25,15 @@ class OfficeViewController: UIViewController, MFMailComposeViewControllerDelegat
         nameText.text = name
         titleText.text = job
         bioText.text = bio
-        emailButton.setTitle(email, forState: UIControlState.Normal)
-        phoneButton.setTitle(phone, forState: UIControlState.Normal)
+        emailButton.setTitle(email, for: UIControlState())
+        phoneButton.setTitle(phone, for: UIControlState())
     }
     
     //Email the office staff
-    @IBAction func emailButtonPressed(sender: AnyObject) {
+    @IBAction func emailButtonPressed(_ sender: AnyObject) {
         let mailComposeViewController = configuredMailComposeViewController()
         if MFMailComposeViewController.canSendMail() {
-            self.presentViewController(mailComposeViewController, animated: true, completion: nil)
+            self.present(mailComposeViewController, animated: true, completion: nil)
         } else {
             self.showSendMailErrorAlert()
         }
@@ -56,16 +56,16 @@ class OfficeViewController: UIViewController, MFMailComposeViewControllerDelegat
     }
     
     // MARK: MFMailComposeViewControllerDelegate Method
-    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        controller.dismissViewControllerAnimated(true, completion: nil)
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
     //Call the office staff
-    @IBAction func phoneButtonPressed(sender: AnyObject) {
-        let phoneCall = "tel://" + phoneButton.titleForState(UIControlState.Normal)!
-        let number = phoneCall.stringByReplacingOccurrencesOfString("-", withString: "", options: NSStringCompareOptions.LiteralSearch, range: nil)
+    @IBAction func phoneButtonPressed(_ sender: AnyObject) {
+        let phoneCall = "tel://" + phoneButton.title(for: UIControlState())!
+        let number = phoneCall.replacingOccurrences(of: "-", with: "", options: NSString.CompareOptions.literal, range: nil)
         
         //Execute the call
-        UIApplication.sharedApplication().openURL(NSURL(string: number)!)
+        UIApplication.shared.openURL(URL(string: number)!)
     }
 }

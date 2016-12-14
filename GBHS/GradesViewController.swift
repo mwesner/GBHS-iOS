@@ -9,14 +9,14 @@ class GradesViewController: UIViewController {
         
         let url = "com.jupitered.jupitered"
                 
-        let requestURL = NSURL(string:url)
-        let request = NSURLRequest(URL: requestURL!)
+        let requestURL = URL(string:url)
+        let request = URLRequest(url: requestURL!)
         webView.loadRequest(request)
     }
     
     
-    @IBAction func closeView(sender: UIBarButtonItem) {
+    @IBAction func closeView(_ sender: UIBarButtonItem) {
         
-        navigationController!.dismissViewControllerAnimated(true, completion: nil)
+        navigationController!.dismiss(animated: true, completion: nil)
     }
 }

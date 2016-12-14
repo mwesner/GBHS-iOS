@@ -8,40 +8,40 @@ class SportsGenderViewController: UITableViewController, UIWebViewDelegate {
     
     var genderarray: [String] = []
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         self.title = levelName
         
-        let backItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.Plain, target: nil, action: nil)
+        let backItem = UIBarButtonItem(title: "", style: UIBarButtonItemStyle.plain, target: nil, action: nil)
         navigationItem.backBarButtonItem = backItem
         
         if (tableView.indexPathForSelectedRow != nil) {
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
+            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
         }
     }
     
     //Number of rows in table
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return genderarray.count
     }
     
     //Contents of each cell
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let CellIdentifier: String = "GenderCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) 
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
         }
         cell!.textLabel!.text = genderarray[indexPath.row]
         return cell!
     }
     
     //Handle cell clicks
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         genderName = genderarray[indexPath.row]
         
@@ -54,34 +54,30 @@ class SportsGenderViewController: UITableViewController, UIWebViewDelegate {
         self.navigationController?.pushViewController(viewController, animated: true)
         */
         
-        let date: NSDate = NSDate()
-        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        let date: Date = Date()
+        let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy"
-        let DateInFormat: String = dateFormatter.stringFromDate(date)
+        let DateInFormat: String = dateFormatter.string(from: date)
         
         let baseURL = "http://schedules.schedulestar.com/Grand-Blanc-High-School-Grand-Blanc-MI/season"
         
         let fullURL = baseURL + "/" + DateInFormat + "/" + genderName + "/" + levelName + "/" + sportName
         
-        let url = fullURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        let url = fullURL.replacingOccurrences(of: " ", with: "%20")
         
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("MoreViewController") as! MoreViewController
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "MoreViewController") as! MoreViewController
         
-        UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        UIApplication.shared.openURL(URL(string: url)!)
         
         delay(0.5) {
             self.navigationController?.pushViewController(viewController, animated: false)
         }
     }
     
-    func delay(delay: Double, closure: ()->()) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(),
-            closure
+    func delay(_ delay: Double, closure: @escaping ()->()) {
+        DispatchQueue.main.asyncAfter(
+            deadline: DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC),
+            execute: closure
         )
     }
 }

@@ -13,24 +13,24 @@ class SportsWebViewController: UIViewController, UIWebViewDelegate {
         
         self.title = genderName + " " + levelName + " " + sportName
         
-        let date: NSDate = NSDate()
-        let dateFormatter: NSDateFormatter = NSDateFormatter()
+        let date: Date = Date()
+        let dateFormatter: DateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM-dd-yyyy"
-        let DateInFormat: String = dateFormatter.stringFromDate(date)
+        let DateInFormat: String = dateFormatter.string(from: date)
         
         let baseURL = "http://schedules.schedulestar.com/Grand-Blanc-High-School-Grand-Blanc-MI/season"
         
         let fullURL = baseURL + "/" + DateInFormat + "/" + genderName + "/" + levelName + "/" + sportName
         
-        let url = fullURL.stringByReplacingOccurrencesOfString(" ", withString: "%20")
+        let url = fullURL.replacingOccurrences(of: " ", with: "%20")
         
-        let requestURL = NSURL(string:url)
-        let request = NSURLRequest(URL: requestURL!)
+        let requestURL = URL(string:url)
+        let request = URLRequest(url: requestURL!)
         webView.loadRequest(request)
     }
     
-    func webViewDidFinishLoad(webView: UIWebView) {
-        webView.scrollView.contentOffset = CGPointMake(0, 1000);
+    func webViewDidFinishLoad(_ webView: UIWebView) {
+        webView.scrollView.contentOffset = CGPoint(x: 0, y: 1000);
     }
     
     

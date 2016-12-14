@@ -74,30 +74,30 @@ class SportsViewController: UITableViewController, UIWebViewDelegate {
         "Boys and Girls"
     ]
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if (tableView.indexPathForSelectedRow != nil) {
-            tableView.deselectRowAtIndexPath(tableView.indexPathForSelectedRow!, animated: true)
+            tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
         }
     }
     
     //Number of rows in table
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return sportslist.count
     }
     
     //Contents of each cell
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let (name, icon) = sportslist[indexPath.row]
         
         let CellIdentifier: String = "SportsCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) 
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
         }
         cell!.textLabel!.text = name
         cell!.imageView!.image = UIImage(named: icon)
@@ -106,7 +106,7 @@ class SportsViewController: UITableViewController, UIWebViewDelegate {
     }
     
     //Handle cell clicks
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         switch (indexPath.row) {
             case 0: //Baseball: All levels, Boys
@@ -167,7 +167,7 @@ class SportsViewController: UITableViewController, UIWebViewDelegate {
                 print("Error selecting sport", terminator: "")
         }
     
-        let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("SportsLevelViewController") as! SportsLevelViewController
+        let viewController = self.storyboard!.instantiateViewController(withIdentifier: "SportsLevelViewController") as! SportsLevelViewController
         
         if (level == 1) {
             viewController.levelarray = all

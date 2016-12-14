@@ -24,7 +24,7 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         
         refreshControl = UIRefreshControl()
         refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        refreshControl.addTarget(self, action: #selector(AnnounceViewController.refresh(_:)), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
         
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -33,28 +33,28 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
         getAnnouncements()
     }
     
-    func refresh(sender:AnyObject) {
+    func refresh(_ sender:AnyObject) {
         getAnnouncements()
     }
     
     
     //Number of rows in table
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return announcements.count
     }
     
     //Contents of each cell
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell: UITableViewCell?
         
         if sort[indexPath.row] == 1 {
             let CellIdentifier: String = "AnnounceCell"
             
-            cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier)
+            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier)
             
             if cell == nil {
-                cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+                cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
             }
             
             cell!.textLabel?.text = announcements[indexPath.row]
@@ -63,12 +63,12 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
             //Date cell, designed to act as a custom section header
             let CellIdentifier: String = "DateCell"
             
-            cell = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
+            cell = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) 
      if cell == nil {
-                cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: CellIdentifier)
+                cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: CellIdentifier)
             }
             cell!.textLabel?.text = " "
-            cell!.detailTextLabel?.text = announcements[indexPath.row].uppercaseString
+            cell!.detailTextLabel?.text = announcements[indexPath.row].uppercased()
         }
         
         return cell!
@@ -78,11 +78,11 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
     func getAnnouncements() {
         let urlString = "http://drive.google.com/uc?export=downloads&id=0B0YlVLIB047UQzRVclRBb2RFS00"
         
-        if let myURL = NSURL(string: urlString) {
+        if let myURL = URL(string: urlString) {
             
             var myHTMLString: String?
             do {
-                myHTMLString = try String(contentsOfURL: myURL, encoding: NSUTF8StringEncoding)
+                myHTMLString = try String(contentsOf: myURL, encoding: String.Encoding.utf8)
                 
                 //Add <root> tag, so XML only has one root tag
                 myHTMLString = "<root>\n" + myHTMLString! + "</root>"
@@ -93,9 +93,9 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
                 
                 if xml["root"]["group"].all.count > 0 {
                     //Announcements present.
-                    tableView.hidden = false
-                    txtError.hidden = true
-                    imgError.hidden = true
+                    tableView.isHidden = false
+                    txtError.isHidden = true
+                    imgError.isHidden = true
                 }
                 
                 for i in 0..<xml["root"]["group"].all.count {
@@ -118,7 +118,7 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
                     //Connection established, but scraper has failed.
                     txtError.text = "Cannot parse announcements feed"
                     
-                    Answers.logCustomEventWithName("Announcements parse failure: \(error.localizedDescription)", customAttributes: nil)
+                    Answers.logCustomEvent(withName: "Announcements parse failure: \(error.localizedDescription)", customAttributes: nil)
                 }else{
                     //No internet connection.
                     txtError.text = "Cannot connect to announcements feed"
@@ -129,21 +129,28 @@ class AnnounceViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     class Reachability {
-        class func isConnectedToNetwork() -> Bool {
+      class func isConnectedToNetwork() -> Bool {
+            
             var zeroAddress = sockaddr_in()
-            zeroAddress.sin_len = UInt8(sizeofValue(zeroAddress))
+            zeroAddress.sin_len = UInt8(MemoryLayout<sockaddr_in>.size)
             zeroAddress.sin_family = sa_family_t(AF_INET)
-            let defaultRouteReachability = withUnsafePointer(&zeroAddress) {
-                SCNetworkReachabilityCreateWithAddress(nil, UnsafePointer($0))
-            }
-            var flags = SCNetworkReachabilityFlags()
-            if !SCNetworkReachabilityGetFlags(defaultRouteReachability!, &flags) {
+            
+            guard let defaultRouteReachability = withUnsafePointer(to: &zeroAddress, {
+                $0.withMemoryRebound(to: sockaddr.self, capacity: 1) {
+                    SCNetworkReachabilityCreateWithAddress(nil, $0)
+                }
+            }) else {
                 return false
             }
-            let isReachable = (flags.rawValue & UInt32(kSCNetworkFlagsReachable)) != 0
-            let needsConnection = (flags.rawValue & UInt32(kSCNetworkFlagsConnectionRequired)) != 0
+            
+            var flags: SCNetworkReachabilityFlags = []
+            if !SCNetworkReachabilityGetFlags(defaultRouteReachability, &flags) {
+                return false
+            }
+            
+            let isReachable = flags.contains(.reachable)
+            let needsConnection = flags.contains(.connectionRequired)
+            
             return (isReachable && !needsConnection)
-        }
-    }
-}
+        }}}
 

@@ -7,7 +7,7 @@ class TweetsViewController: TWTRTimelineViewController {
         super.viewDidLoad()
         
         let client = TWTRAPIClient()
-        self.dataSource = TWTRUserTimelineDataSource(screenName: "GrandBlancPride", APIClient: client)
+        self.dataSource = TWTRUserTimelineDataSource(screenName: "GrandBlancPride", apiClient: client)
         
         
         //Prevent translucent nav bar from covering tweets

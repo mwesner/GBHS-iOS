@@ -6,7 +6,7 @@ class ExternalViewController: UITableViewController {
     
     @IBOutlet var table: UITableView!
     
-    @IBAction func changeTypeSelected(sender: UISegmentedControl) {
+    @IBAction func changeTypeSelected(_ sender: UISegmentedControl) {
         // TODO: Update table on segment selected
     }
     
@@ -29,35 +29,35 @@ class ExternalViewController: UITableViewController {
     ]
         
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         if (self.table.indexPathForSelectedRow != nil) {
-            self.table.deselectRowAtIndexPath(self.table.indexPathForSelectedRow!, animated: true)
+            self.table.deselectRow(at: self.table.indexPathForSelectedRow!, animated: true)
         }
     }
     
     //Number of sections in table
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     //Number of rows in table
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return external.count
     }
     
     //Contents of each cell
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let (title, link) = external[indexPath.row]
         
         let CellIdentifier: String = "ExternalCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) 
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: CellIdentifier)
         }
         cell!.textLabel!.text = title
         cell!.detailTextLabel!.text = link
@@ -66,18 +66,18 @@ class ExternalViewController: UITableViewController {
     }
     
     //Open the selected link
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let (_, link) = external[indexPath.item]
         
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        tableView.deselectRow(at: indexPath, animated: false)
         
         //Used to determine if the link should use https
         switch indexPath.item {
         case 2, 3, 7, 8, 12, 14:
-            UIApplication.sharedApplication().openURL(NSURL(string: "http://" + link)!)
+            UIApplication.shared.openURL(URL(string: "http://" + link)!)
             break;
         default:
-            UIApplication.sharedApplication().openURL(NSURL(string: "https://" + link)!)
+            UIApplication.shared.openURL(URL(string: "https://" + link)!)
             break;
         }
     }

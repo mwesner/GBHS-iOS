@@ -5,10 +5,10 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapChange: UISegmentedControl!
     
-    internal static var camera = GMSCameraPosition.cameraWithLatitude(42.923275, longitude: -83.627256, zoom: 15.25)
-    internal var mapView = GMSMapView.mapWithFrame(CGRectZero, camera:camera)
+    internal static var camera = GMSCameraPosition.camera(withLatitude: 42.923275, longitude: -83.627256, zoom: 15.25)
+    internal var mapView = GMSMapView.map(withFrame: CGRect.zero, camera:camera)
     
-    @IBAction func changeMapType(sender: UISegmentedControl) {
+    @IBAction func changeMapType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             self.mapView.mapType = kGMSTypeNormal

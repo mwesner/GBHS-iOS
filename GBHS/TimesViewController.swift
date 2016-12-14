@@ -48,7 +48,7 @@ class TimesViewController: UITableViewController {
     @IBOutlet weak var txtNotice: UITextView!
     
     @IBOutlet weak var notice: UITextView!
-    @IBAction func changeType(sender: UISegmentedControl) {
+    @IBAction func changeType(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             txtNotice.text = fulldaynotice
@@ -72,19 +72,19 @@ class TimesViewController: UITableViewController {
     
     }
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
         tableView.reloadData()
     }
     
     //Number of sections in table
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     //Number of rows in table
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         switch scheduleType.selectedSegmentIndex {
         case 0:
@@ -99,7 +99,7 @@ class TimesViewController: UITableViewController {
     }
     
     //Contents of each cell
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var (hour, time) = fullday[indexPath.row]
         switch scheduleType.selectedSegmentIndex {
             case 0:
@@ -115,10 +115,10 @@ class TimesViewController: UITableViewController {
         
         let CellIdentifier: String = "TimesCell"
         
-        var cell: UITableViewCell? = tableView.dequeueReusableCellWithIdentifier(CellIdentifier) 
+        var cell: UITableViewCell? = tableView.dequeueReusableCell(withIdentifier: CellIdentifier) 
         
         if cell == nil {
-            cell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: CellIdentifier)
+            cell = UITableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: CellIdentifier)
         }
         cell!.textLabel?.text = hour
         cell!.detailTextLabel?.numberOfLines = 0
